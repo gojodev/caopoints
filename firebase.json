@@ -1,0 +1,39 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "https://caopoints.com/",
+        "headers": [
+          {
+            "key": "Set-Cookie",
+            "value": "SameSite=None; Secure"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "'https://caopoints.com/' , 'http://127.0.0.1:5500"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000,
+      "host": "0.0.0.0"
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
