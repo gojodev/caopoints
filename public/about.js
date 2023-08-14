@@ -1,3 +1,6 @@
+/**
+ * automically sets the color theme of the website to be dark or light 
+ */
 function set_sys_theme() {
 
   var r = document.querySelector(":root");
@@ -12,7 +15,6 @@ function set_sys_theme() {
     cyan_text.forEach(text => {
       text.style.color = "cyan";
     });
-
   }
 
   else {
