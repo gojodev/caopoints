@@ -9,25 +9,10 @@ var target_num;
 export var hl_num;
 export var ol_num;
 
-function auto_input(target_num, hl_num, ol_num) {
-  document.getElementById('target_text').value = target_num;
-  document.getElementById('hl_subs_text').value = hl_num;
-  document.getElementById('ol_subs_text').value = ol_num;
-}
-
-// USE sessionStorage !!!!!!!!!!!!!!
-function keep_inputs(target_num, hl_num, ol_num) {
-  localStorage.setItem('target_num', target_num);
-  localStorage.setItem('hl_num', hl_num);
-  localStorage.setItem('ol_num', ol_num);
-
-  target_num = localStorage.getItem('target_num');
-  hl_num = localStorage.getItem('hl_num');
-  ol_num = localStorage.getItem('ol_num');
-
-  auto_input(target_num, hl_num, ol_num);
-}
-
+/**
+ * collects the data values from the HTML (target_num, hl_num, ol_num)
+ * handles error cases and successfull output
+ */
 document.getElementById('invalid_input').style.display = 'none';
 export async function find_points_needed() {
   target_num = Number(document.getElementById('target_text').value);
@@ -79,7 +64,6 @@ export async function find_points_needed() {
     else {
       maths_plus_25 = false;
     }
-    keep_inputs(target_num, hl_num, ol_num);
     var matches_info = main(target_num, hl_num, ol_num, maths_plus_25);
     var points_list = matches_info[0];
     var points_req = matches_info[1];
