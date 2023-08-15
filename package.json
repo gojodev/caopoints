@@ -6,7 +6,7 @@
   "dependencies": {
     "darkreader": "^4.9.58",
     "firebase": "^9.15.0",
-    "node-fetch": "^2.6.7",
+    "node-fetch": "^3.3.2",
     "purgecss": "^5.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
