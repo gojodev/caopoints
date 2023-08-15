@@ -1,6 +1,6 @@
-'use strict';
-import { add_25, main, gar_and_ptg, red_commas, display_plus_25, set_sys_theme } from './dom-support';
-import {firebaseConfig} from './config.js';
+"use strict";
+import { add_25, main, gar_and_ptg, red_commas, display_plus_25, set_sys_theme } from "./dom-support";
+import {firebaseConfig} from "./config.js";
 
 firebaseConfig();
 
@@ -13,11 +13,11 @@ export var ol_num;
  * collects the data values from the HTML (target_num, hl_num, ol_num)
  * handles error cases and successfull output
  */
-document.getElementById('invalid_input').style.display = 'none';
+document.getElementById("invalid_input").style.display = "none";
 export async function find_points_needed() {
-  target_num = Number(document.getElementById('target_text').value);
-  hl_num = Number(document.getElementById('hl_subs_text').value);
-  ol_num = Number(document.getElementById('ol_subs_text').value);
+  target_num = Number(document.getElementById("target_text").value);
+  hl_num = Number(document.getElementById("hl_subs_text").value);
+  ol_num = Number(document.getElementById("ol_subs_text").value);
 
   // check for invalid input
   var invalid_target_input = (target_num <= 0) || (target_num > 625);
@@ -26,37 +26,37 @@ export async function find_points_needed() {
   var invalid_range = (max_pts >= target_num) == false;
 
   const range_error_msg = `It's impossible to achieve ${target_num} CAO points with ${hl_num} higher-level subjects and ${ol_num} ordinary-level subjects.`;
-  const pts_error_msg = 'Your inputted CAO points must be between 1 and 625.';
-  const subs_error_msh = 'This calculator will not allow for more than 6 subjects in total as inputs.';
+  const pts_error_msg = "Your inputted CAO points must be between 1 and 625.";
+  const subs_error_msh = "This calculator will not allow for more than 6 subjects in total as inputs.";
 
-  var error_status = '';
+  var error_status = "";
 
   if (invalid_range) {
-    error_status += range_error_msg + '\n';
+    error_status += range_error_msg + "\n";
   } if (invalid_subs_input) {
-    error_status += subs_error_msh + '\n';
+    error_status += subs_error_msh + "\n";
   }
   if (invalid_target_input) {
-    error_status += pts_error_msg + '\n';
+    error_status += pts_error_msg + "\n";
   }
 
-  if (error_status != '') {
+  if (error_status != "") {
     // if the invalid_input DOM's isn't speficied HTML thinks it doesn't exist ------
-    document.getElementById('invalid_input').style.display = 'block';
-    document.getElementById('invalid_input').style.color = 'red';
-    document.getElementById('invalid_input').innerHTML = error_status;
+    document.getElementById("invalid_input").style.display = "block";
+    document.getElementById("invalid_input").style.color = "red";
+    document.getElementById("invalid_input").innerHTML = error_status;
     // --------------
 
-    document.getElementById('info_container').style.opacity = '1';
-    document.getElementById('soultion_output').style.display = 'none';
-    document.getElementById('adding_25_container').style.display = 'none';
+    document.getElementById("info_container").style.opacity = "1";
+    document.getElementById("soultion_output").style.display = "none";
+    document.getElementById("adding_25_container").style.display = "none";
   }
 
   else {
-    document.getElementById('info_container').style.opacity = '1';
-    document.getElementById('info_container').style.display = 'block';
-    document.getElementById('soultion_output').style.display = 'block';
-    document.getElementById('invalid_input').style.display = 'none';
+    document.getElementById("info_container").style.opacity = "1";
+    document.getElementById("info_container").style.display = "block";
+    document.getElementById("soultion_output").style.display = "block";
+    document.getElementById("invalid_input").style.display = "none";
     var maths_plus_25;
     if (add_25 == 25) {
       maths_plus_25 = true;
@@ -81,8 +81,8 @@ export async function find_points_needed() {
 
     req_results = red_commas(req_results);
 
-    document.getElementById('points_req').innerHTML = String(points_req);
-    document.getElementById('req_results').innerHTML = String(req_results);
-    document.getElementById('grade_avg_req').innerHTML = String(grade_avg);
+    document.getElementById("points_req").innerHTML = String(points_req);
+    document.getElementById("req_results").innerHTML = String(req_results);
+    document.getElementById("grade_avg_req").innerHTML = String(grade_avg);
   }
 }
