@@ -17,7 +17,7 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "esbuild": "^0.16.16",
     "rollup": "^3.28.0",
-    "rollup-watch": "^3.2.2",
+    "rollup-watch": "^4.3.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
