@@ -1,5 +1,8 @@
 import { find_points_needed, hl_num, ol_num } from "./home";
 
+/**
+ * automically changes the theme of the website
+ */
 export function set_sys_theme() {
 
   var r = document.querySelector(":root");
@@ -22,8 +25,13 @@ export function set_sys_theme() {
   }
 }
 
+// "listens" for a click from the is_hl_maths function
 document.getElementById("bool_hl_maths").addEventListener("click", is_hl_maths);
 
+/**
+ * determines the value of the add_25 variable
+ * toggles display of the button
+ */
 export var add_25 = 25;
 var is_hl_maths_counter = 1;
 var counter = 1;
@@ -51,7 +59,13 @@ function is_hl_maths() {
 }
 is_hl_maths();
 
+// "listens" for a click from the is_lcvp function
 document.getElementById("lcvp").addEventListener("click", is_lcvp);
+
+/**
+ * determines the value of the lcvp variable
+ * toggles display of the button
+ */
 var is_lcvp_counter = 1;
 var lcvp_counter = 1;
 var lcvp;
@@ -84,8 +98,15 @@ function is_lcvp() {
 
 is_lcvp();
 
+// hides the "Adding +25" text before the page loads
 document.getElementById("adding_25_container").style.display = "none";
 
+/**
+ * Adjusts the grades that have the same value in ordinary level and higher level for correct output
+ * for example a H6 and O2 are both worth 46 points
+ * @param {array} letter_grades
+ * @returns array
+ */
 function adjustor(letter_grades) {
   var CHANGEABLES = ["h5", "h6", "h7", "o1", "o2", "o3"];
   var HL_SUBS = ["h1", "h2", "h3", "h4", "h5", "h6", "h7"];
@@ -188,7 +209,11 @@ function adjustor(letter_grades) {
   return letter_grades;
 }
 
-// grade average and points to grades as list of numbers
+/**
+ * grade average and points to grades as list of numbers
+ * @param {array} points_needed 
+ * @returns array
+ */
 export function gar_and_ptg(points_needed) {
 
   points_needed = points_needed.sort();
@@ -281,6 +306,14 @@ export function red_commas(grades) {
   return grades;
 }
 
+/**
+ * increments a grade's value to the next one
+ * for example increment a grade that has the value of 88 will be increased to 100
+ * @param {array} grades 
+ * @param {int} index 
+ * @param {boolean} maths_plus_25 
+ * @returns 
+ */
 function single_change(grades, index, maths_plus_25) {
   const is_in_dict = [12, 20, 28, 37, 46, 56, 66, 77, 88, 100];
   var dict_changeables = {
@@ -308,6 +341,12 @@ function sum(array) {
   return array.filter(el => +el).reduce((acc, cv) => acc + cv, 0);
 }
 
+/**
+ * generates a starting point of an array of which individual values will be increased later 
+ * @param {int} hl_subs 
+ * @param {int} ol_subs 
+ * @returns array
+ */
 function starting_grades(hl_subs, ol_subs) {
   var grades = [];
   for (var i = 0; i < hl_subs; i++) {
