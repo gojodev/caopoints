@@ -16,11 +16,7 @@
           },
           {
             "key": "Access-Control-Allow-Origin",
-            "value": "'https://caopoints.com/' , 'http://127.0.0.1:5500"
-          },
-          {
-            "key": "Cache-Control",
-            "value": "max-age=31536000"
+            "value": "https://caopoints.com/"
           }
         ]
       }
