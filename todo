@@ -1,9 +1,9 @@
 - fix your headers
 - fix all issues on page speed insights
 - add documentation to your code 
-- when the user enters code (on pc) add a little bubble that will hover close to the input and tell them the input description and limits
+- for desktop users when the user enters code add a little bubble that will hover close to the input and tell them the input description and limits
 - change the website's styling
-
+- for mobile users zoom into the points system image when clicked on
 emails:
 investorkxv7@gmail.com (kevin)
 divisionprospect@gmail.com (kevin and samuel)
