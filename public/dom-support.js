@@ -368,6 +368,16 @@ function highest_points_poss(hl_subs, ol_subs, maths_plus_25) {
   return counter;
 }
 
+/**
+ * this is whole algorothim behind generate correct output
+ * in short it creates an array of values that are gradually increased until it's overall value is increased
+ * until it "reaches" the cao points target
+ * @param {target} target 
+ * @param {hl_subs} hl_subs 
+ * @param {ol_subs} ol_subs 
+ * @param {maths_plus_25} maths_plus_25 
+ * @returns array
+ */
 export function main(target, hl_subs, ol_subs, maths_plus_25) {
   var total_subs = hl_subs + ol_subs;
   var current_grades = starting_grades(hl_subs, ol_subs);
@@ -412,7 +422,9 @@ function update_inputs() {
 }
 
 update_inputs();
-
+/**
+ * yearly joke that will be activated in may and june
+ */
 function motivate() {
   seconds += 1;
   if (59 <= seconds && seconds <= 60) {
@@ -430,8 +442,7 @@ function motivate() {
 var seconds = 0;
 var dt = new Date();
 var month = dt.getMonth() + 1; // cause of 0 indexing of the 12 months becomes 0 - 11
-// this will only activate in may next year i'll set it to may and june
-if ([5, 6].includes(month)) {
+if ([4, 5].includes(month)) {
   setInterval(motivate, 1000);
   motivate();
 }
