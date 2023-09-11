@@ -1,137 +1,240 @@
-/* Reset some default styles */
-body, h1, h2, p {
-  margin: 0;
-  padding: 0;
+* {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
-/* Set default font styles */
+:root {
+  --main-text-color: #ffffff;
+  --primary: #0080ff;
+  /* --bg-color: #000000; */
+  --bg-color: black;
+  --secondary: #001952;
+  --accent: #fdcb6e;
+}
+
+/* https://uigradients.com/#CanYouFeelTheLoveTonight */
+.gradient {
+  background: #4568DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #B06AB3, #4568DC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-  background-color: #f0f0f0;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  color: var(--main-text-color);
+  background-color: var(--bg-color);
 }
 
-/* Header styles */
-#header {
-  background-color: #0080ff;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-.navbar {
+.header {
+  margin: 10px;
+  padding: 10px;
+  color: var(--main-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--bg-color);
 }
 
 .logo-container {
   flex: 1;
+  width: 50vw;
 }
+
 
 .logo {
-  max-width: 150px; /* Adjust the max-width as needed */
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  width: 150px;
   height: auto;
+  margin: auto;
 }
 
-.nav-links {
+.nav {
   flex: 1;
-  text-align: right;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
 }
 
 .nav-link {
-  margin: 0 10px;
   text-decoration: none;
-  color: #fff;
+  text-align: center;
+  color: var(--main-text-color);
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #ff9900;
+.selected {
+  color: var(--accent);
 }
 
-/* Hero section styles */
-.hero {
+.welcome {
+  background-color: var(--primary);
   text-align: center;
-  margin-top: 20px;
+  padding: 15px;
+  color: var(--main-text-color);
 }
 
-.hero h1 {
+.welcome-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome h1 {
   font-size: 36px;
   margin-bottom: 10px;
 }
 
-.hero p {
+.welcome p {
   font-size: 18px;
 }
 
-/* Input section styles */
-.input-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px;
+.calculator {
+  background-color: var(--secondary);
+  padding: 40px 0;
+  text-align: center;
 }
 
-.input-container h2 {
+.calculator-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--main-text-color);
+}
+
+.calculator h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  color: var(--primary);
 }
 
-input[type="number"] {
+input[type="number"],
+select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.calculate-button {
-  background-color: #0080ff;
-  color: #fff;
+  font-weight: bold;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
+  border-bottom: 1px solid var(--main-text-color);
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-size: 16px;
+  margin-top: 5px;
+  transition: border-color 0.3s;
 }
 
-.calculate-button:hover {
-  background-color: #ff9900;
+input[type="number"]:focus,
+select:focus {
+  border-color: var(--accent);
 }
 
-/* Main content styles */
-.main-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px;
+/* for mobile users */
+@media screen and (max-width: 500px) {
+  input[type="number"],
+  select {
+    text-align: center;
+  }
 }
 
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
+.results {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  color: var(--primary);
+  font-weight: bold;
+  background-color: #2d3436;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.results-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results h2,
+.results p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.motivation {
+  margin: auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.motivation-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.info {
+  background-color: var(--secondary);
+  padding: 15px 0;
+  color: var(--main-text-color);
+}
+
+.info-content {
+  text-align: center;
+  margin: auto;
+}
+
+.info p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 #cao-link {
-  color: #0080ff;
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Additional styles for your sections, headings, and paragraphs can be added here */
+#cao-link:hover {
+  color: var(--primary);
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--primary);
+  font-size: 14px;
+  padding: 10px;
+}
+
+#adding_25_text {
+  color: var(--accent);
+}
+
+.info_output {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.ideal {
+  color: grey;
+}
+
+.important-red {
+  color: red;
+}

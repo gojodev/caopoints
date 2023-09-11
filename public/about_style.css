@@ -1,0 +1,148 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+/* Custom variables for color scheme */
+:root {
+    --main-text-color: #ffffff;
+    --primary: #0080ff;
+    --bg-color: black;
+    --secondary: #001952;
+    --accent-color: #fdcb6e;
+}
+
+/* Set default font styles */
+body {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    color: var(--main-text-color);
+    background-color: var(--bg-color);
+}
+
+/* https://uigradients.com/#CanYouFeelTheLoveTonight */
+.gradient {
+    background: #4568DC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Header styles */
+.logo-container {
+    flex: 1;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.nav {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.selected {
+    color: var(--accent-color);
+}
+
+/* Section header styles */
+.title {
+    color: var(--primary);
+}
+
+.header {
+    padding: 10px;
+    color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+
+/* Motivation image styles */
+#img-info {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    margin: auto;
+    text-align: center;
+}
+
+/* Content box styles */
+.general_background {
+    background-color: var(--secondary);
+    /* Dark blue background */
+    padding: 15px;
+    color: var(--main-text-color);
+
+    margin: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.info_output {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Founder's information styles */
+#emmanuel-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#emmanuel {
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+#founder-name {
+    margin-top: 10px;
+}
+
+#founder-text {
+    color: var(--accent-color);
+    /* Accent color for founder's title */
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Icon styles */
+.bottom-images {
+    height: auto;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.bottom-images:hover {
+    transform: scale(1.2);
+}
