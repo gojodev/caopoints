@@ -5,7 +5,7 @@
 }
 
 :root {
-  --main-text-color: #ffffff;
+  --main-text-color: white;
   --primary: #0080ff;
   --bg-color: black;
   --secondary: #001952;
@@ -21,7 +21,6 @@
   background: linear-gradient(to right, #B06AB3, #4568DC);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 
 body {
   max-width: 100%;
@@ -45,7 +44,6 @@ body {
   flex: 1;
   width: 50vw;
 }
-
 
 .logo {
   display: flex;
@@ -74,8 +72,13 @@ body {
   transition: color 0.3s;
 }
 
+.nav-link:hover {
+  color: var(--primary);
+}
+
 .selected {
   color: var(--accent);
+  transition: 0.2s;
 }
 
 .welcome {
@@ -146,8 +149,13 @@ select:focus {
   border-color: var(--accent);
 }
 
+::placeholder {
+  color: var(--main-text-color);
+}
+
 /* for mobile users */
 @media screen and (max-width: 500px) {
+
   input[type="number"],
   select {
     text-align: center;
