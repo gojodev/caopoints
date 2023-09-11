@@ -1,9 +1,10 @@
 - fix your headers
-- fix all issues on page speed insights
-- add documentation to your code 
 - for desktop users when the user enters code add a little bubble that will hover close to the input and tell them the input description and limits
-- change the website's styling
+- you'll have to merge the js files one (not including config.js obv) according to GPT it reduces strain on the browsers and helps with Caching
 - for mobile users zoom into the points system image when clicked on
+
+source control will be have committed pushes after the html css and js are sorted 
+cause i wanna push stable versions that i can go back if something happens or as a reference
 emails:
 investorkxv7@gmail.com (kevin)
 divisionprospect@gmail.com (kevin and samuel)
