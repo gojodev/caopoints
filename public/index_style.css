@@ -7,7 +7,6 @@
 :root {
   --main-text-color: #ffffff;
   --primary: #0080ff;
-  /* --bg-color: #000000; */
   --bg-color: black;
   --secondary: #001952;
   --accent: #fdcb6e;
@@ -135,7 +134,7 @@ select {
   font-weight: bold;
   border: none;
   border-bottom: 1px solid var(--main-text-color);
-  background-color: transparent;
+  background-color: var(--primary);
   color: var(--main-text-color);
   font-size: 16px;
   margin-top: 5px;
