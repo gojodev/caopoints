@@ -1,3 +1,4 @@
+// ! the file is here cause i no longer wanna have my keys exposed to the public even if it is harmless
 import { initializeApp } from "firebase/app";
 import { getPerformance } from "firebase/performance";
 
