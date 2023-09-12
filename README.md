@@ -14,12 +14,11 @@
         ordinary level subjects. The amount of trial and error needed would frustrate anyone.</p>
     <p>The tool also completely <strong>FREE</strong> to use and doesn't retain any of
         the user's inputted information.</p>
-    <strong>TLDR; The tool saves student's time, stress, and money.</strong>
+    <strong>TLDR; The tool saves students' time, stress, and money.</strong>
   
   <br>
   <br>
   <br>
   
   <p> https://caopoints.com/ </p>
-  <p><img src="https://github.com/Agent421/caopoints/assets/40457467/2a211e9a-e543-4327-b274-4a67b9b21790" alt="demo img"></p>
 </div>
