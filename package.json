@@ -14,7 +14,7 @@
     "web-vitals": "^3.4.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "esbuild": "^0.19.2",
     "rollup": "^3.29.1",
     "rollup-watch": "^4.3.1",
