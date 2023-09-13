@@ -1,5 +1,5 @@
 # caopoints
-<div>
+<div style="text-align:center;margin:auto;">
   <p>The tool quickly outputs the lowest grade you can get in a number of subjects that will give you enough points for a certain course.</p>
     <p>
         When I was an Irish Leaving cert student it was frustrating and time-consuming to calculate an ideal
@@ -21,5 +21,5 @@
   <br>
   
   <p> https://caopoints.com/ </p>
-  <p><img src="https://github.com/Agent421/caopoints/assets/40457467/2a211e9a-e543-4327-b274-4a67b9b21790" alt="demo img"></p>
+  <p><img src="https://github.com/Agent421/caopoints/assets/40457467/1a164e9c-3f61-4007-8a9d-3a4f436fc072" alt="demo"></p>
 </div>
