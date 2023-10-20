@@ -47,6 +47,12 @@ build/Release
 # Dependency directories
 node_modules/
 
+# xD
+previous_database/
+public/grades_and_points/
+Og_JS.txt
+ads.txt
+
 # Optional npm cache directory
 .npm
 
