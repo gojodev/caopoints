@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "darkreader": "^4.9.58",
-    "firebase": "^10.2.0",
+    "firebase": "^10.3.1",
     "node-fetch": "^3.3.2",
     "purgecss": "^5.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -14,9 +14,9 @@
     "web-vitals": "^3.4.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "esbuild": "^0.19.2",
-    "rollup": "^3.28.0",
+    "rollup": "^3.29.1",
     "rollup-watch": "^4.3.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
