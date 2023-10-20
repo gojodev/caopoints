@@ -488,7 +488,7 @@ function motivate() {
 var seconds = 0;
 var dt = new Date();
 var month = dt.getMonth() + 1; // cause of 0 indexing of the 12 months becomes 0 - 11
-if ([4, 5].includes(month)) {
+if ([3, 4, 5].includes(month)) {
   setInterval(motivate, 1000);
   motivate();
 }
