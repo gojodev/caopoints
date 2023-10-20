@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     vertical-align: middle;
-    width: 150px;
+    width: 250px;
     height: auto;
     margin: auto;
 }
@@ -65,7 +65,7 @@ body {
 
 .nav-link:hover {
     color: var(--primary);
-  }
+}
 
 .selected {
     color: var(--accent-color);
@@ -126,7 +126,12 @@ body {
     max-width: 300px;
     height: auto;
     border-radius: 50%;
+    border: 5px solid white;
+    transition: transform, 0.2s;
+}
 
+#emmanuel:hover {
+    transform: scale(1.05);
 }
 
 #founder-name {
