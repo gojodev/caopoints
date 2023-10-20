@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "build": "node ./esbuild.config.js",
-    "update": ""
+    "build": "node ./esbuild.config.js"
   },
   "dependencies": {
     "darkreader": "^4.9.58",
