@@ -2,6 +2,7 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1rem;
   text-decoration: none;
+  font-weight: bold;
 }
 
 :root {
@@ -42,23 +43,19 @@ body {
 }
 
 .logo-container {
-  flex: 1;
-  width: 50vw;
+  width: 50%;
+  align-items: center;
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  width: 200px;
-  height: auto;
   margin: auto;
+  text-align: center;
+  width: 100%;
 }
 
 .nav {
-  flex: 1;
-  text-align: center;
-  width: 100%;
+  width: 50%;
+  align-items: center;
 }
 
 .nav-list {
@@ -91,7 +88,7 @@ body {
 
 .welcome-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .welcome h1 {
@@ -151,6 +148,7 @@ select:focus {
   border-color: var(--accent);
 }
 
+/* removes the up and down arrows from the numebr input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -159,6 +157,7 @@ input::-webkit-inner-spin-button {
 
 
 ::placeholder {
+  opacity: 0.8;
   color: var(--main-text-color);
 }
 
@@ -253,4 +252,16 @@ input::-webkit-inner-spin-button {
 
 .important-red {
   color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 250px;
+  }
+
+  .logo-container {
+    width: 50%;
+    align-items: center;
+    text-align: center;
+  }
 }
