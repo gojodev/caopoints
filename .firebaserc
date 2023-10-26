@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "caopoints-info"
-  }
+  },
+  "targets": {
+    "caopoints-info": {
+      "hosting": {
+        "caopoints": [
+          "caopoints"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
