@@ -70,3 +70,6 @@ ads.txt
 
 # dotenv environment variables file
 .env
+
+#my_todo list
+.todo.txt
