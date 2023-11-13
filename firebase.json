@@ -13,7 +13,7 @@
         "headers": [
           {
             "key": "Set-Cookie",
-            "value": "SameSite=None; Secure"
+            "value": "SameSite=None; Secure; Partitioned;"
           },
           {
             "key": "Access-Control-Allow-Origin",
