@@ -1,13 +1,2 @@
-- fix your headers concerning cookies
-
-emails:
-investorkxv7@gmail.com (kevin)
-divisionprospect@gmail.com (kevin and samuel)
-samueladu5038@gmail.com (samuel)
-
-
-for improvements to styling
-https://flatuicolors.com/ for color pallets
-https://uigradients.com/#LearningandLeading 
-https://realtimecolors.com/
-consider changing font
+- cookie header concerns
+- issues with image display on mobile devices
