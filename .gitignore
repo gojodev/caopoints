@@ -73,3 +73,6 @@ ads.txt
 
 #my_todo list
 .todo.txt
+
+# progressier.js for PWA
+.progressier.js
