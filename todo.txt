@@ -1,2 +1,2 @@
-- cookie header concerns
-- issues with image display on mobile devices
+- keep ezoics strain in mind but overall you should be fine
+- consider re vamping the look of the website to make it look more professional (the style ain't trash but it ain't the best either)

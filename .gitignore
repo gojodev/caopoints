@@ -76,3 +76,6 @@ ads.txt
 
 # progressier.js for PWA
 .progressier.js
+
+# git
+.git

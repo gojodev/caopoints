@@ -13,15 +13,6 @@
   --accent: #fdcb6e;
 }
 
-/* https://uigradients.com/#CanYouFeelTheLoveTonight */
-.gradient {
-  background: #4568DC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #B06AB3, #4568DC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 body {
   min-width: 330px;
@@ -43,7 +34,10 @@ body {
 }
 
 .logo-container {
-  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+  width: 200px;
   align-items: center;
 }
 
@@ -260,7 +254,7 @@ input::-webkit-inner-spin-button {
   }
 
   .logo-container {
-    width: 50%;
+    width: auto;
     align-items: center;
     text-align: center;
   }

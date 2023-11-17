@@ -23,3 +23,65 @@
   <p> https://caopoints.com/ </p>
   <p><img src="https://github.com/Agent421/caopoints/assets/40457467/1a164e9c-3f61-4007-8a9d-3a4f436fc072" alt="demo"></p>
 </div>
+
+```
+caopoints
+├─ .firebaserc
+├─ .idea
+│  ├─ caopoints.iml
+│  ├─ libraries
+│  │  └─ site_dir.xml
+│  ├─ modules.xml
+│  ├─ vcs.xml
+│  └─ workspace.xml
+├─ .vscode
+│  ├─ extensions.json
+│  ├─ settings.json
+│  └─ tasks.json
+├─ cors.json
+├─ esbuild.config.js
+├─ firebase.json
+├─ logos
+│  ├─ logo1.webp
+│  └─ logo2.webp
+├─ media
+│  ├─ caopoints-demo.mp4
+│  ├─ credit.txt
+│  ├─ keep-it-kinetic-moire-main-version-00-36-15392.mp3
+│  ├─ logo.webp
+│  ├─ promotional video.mp4
+│  └─ slogan.webp
+├─ package-lock.json
+├─ package.json
+├─ privacy policy.html
+├─ progressier.js
+├─ public
+│  ├─ 404.html
+│  ├─ about.html
+│  ├─ about.js
+│  ├─ about_style.css
+│  ├─ bundle.js
+│  ├─ config.js
+│  ├─ cors.json
+│  ├─ dom-support.js
+│  ├─ home.js
+│  ├─ images
+│  │  ├─ emmanuel.webp
+│  │  ├─ favicon.ico
+│  │  ├─ GitHub.webp
+│  │  ├─ joke.webp
+│  │  ├─ kofi.webp
+│  │  ├─ LinkedIn.webp
+│  │  ├─ logo.webp
+│  │  ├─ points-system.webp
+│  │  └─ twitter.webp
+│  ├─ index.html
+│  ├─ index_style.css
+│  └─ main.py
+├─ README.md
+├─ resources.txt
+├─ rollup.config.js
+├─ todo.txt
+└─ update.bat
+
+```
