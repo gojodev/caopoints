@@ -47,11 +47,11 @@ build/Release
 # Dependency directories
 node_modules/
 
-# xD
-previous_database/
-public/grades_and_points/
-Og_JS.txt
-ads.txt
+# ignore stuff 💀
+.idea/
+*.txt
+*.json
+*.bat
 
 # Optional npm cache directory
 .npm
@@ -70,9 +70,6 @@ ads.txt
 
 # dotenv environment variables file
 .env
-
-#my_todo list
-.todo.txt
 
 # progressier.js for PWA
 .progressier.js

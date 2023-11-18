@@ -32,11 +32,5 @@
       "enabled": true
     },
     "singleProjectMode": true
-  },
-  "rewrites": [
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }

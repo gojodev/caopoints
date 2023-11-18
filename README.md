@@ -54,7 +54,6 @@ caopoints
 ├─ package-lock.json
 ├─ package.json
 ├─ privacy policy.html
-├─ progressier.js
 ├─ public
 │  ├─ 404.html
 │  ├─ about.html
@@ -77,7 +76,8 @@ caopoints
 │  │  └─ twitter.webp
 │  ├─ index.html
 │  ├─ index_style.css
-│  └─ main.py
+│  ├─ main.py
+│  └─ progressier.js
 ├─ README.md
 ├─ resources.txt
 ├─ rollup.config.js
