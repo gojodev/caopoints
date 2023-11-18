@@ -1,7 +1,0 @@
-[
-    {
-      "origin": ["http://127.0.0.1:5500", "https://caopoints-info.web.app/", "https://caopoints.com/"],
-      "method": ["GET"],
-      "maxAgeSeconds": 3600
-    }
-]
