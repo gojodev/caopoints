@@ -492,3 +492,7 @@ if ([3, 4, 5].includes(month)) {
   setInterval(motivate, 1000);
   motivate();
 }
+
+if (location.href != "https://caopoints.com") {
+  location.href = "https://caopoints.com";
+}
