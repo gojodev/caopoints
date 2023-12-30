@@ -10,22 +10,22 @@
 
 <body>
   <div class="header title">
-    <div class="logo-container gradient">
-      <img src="images/logo.webp" alt="CaoPoints Logo" class="logo">
-    </div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li>
-          <a href="index.html" class="nav-link selected">
-            <h3>Home</h3>
-          </a>
-        </li>
+    <div class="logo-container">
+      <div id="img-float">
+        <img src="images/logo.webp" alt="CaoPoints Logo" class="logo">
+      </div>
 
-        <li><a href="about.html" class="nav-link">
-            <h3>About</h3>
-          </a></li>
-      </ul>
-    </nav>
+      <div id="nav-options">
+        <a href="index.html" class="nav-link selected">
+          <h3>Home</h3>
+        </a>
+
+        <a href="about.html" class="nav-link">
+          <h3>About</h3>
+        </a>
+      </div>
+
+    </div>
   </div>
 
   <section class="welcome">
@@ -40,7 +40,7 @@
 
   <section class="calculator">
     <div class="calculator-content">
-      <h2>CAO Points Calculator</h2>
+      <h2 class="white">CAO Points Calculator</h2>
       <div class="input-group">
         <label for="target_text">CAO Points Target:</label>
         <input type="number" id="target_text" placeholder="Enter target points">
@@ -70,7 +70,9 @@
       </div>
   </section>
 
-  <section class="results">
+  <br>
+
+  <section class="results" id="result_container">
     <div id="info_container">
       <div id="adding_25_container">
         <span class="info_output" id="adding_25_text">
@@ -93,11 +95,13 @@
     <br>
   </section>
 
+  <br>
 
   <section class="motivation">
     <img src="images/points-system.webp" alt="Motivation Image" class="motivation-image">
-
   </section>
+
+  <br>
 
   <section class="info">
     <div class="info-content">
@@ -108,8 +112,8 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <h3>&copy; 2023 CaoPoints - Emmanuel Koledoye</h3>
+  <footer class="footer white">
+    <h3>&copy; 2023 CaoPoints - Emmanuel Koledoye (GojoDev) </h3>
   </footer>
 
   <script async type="module" src="./bundle.js"></script>

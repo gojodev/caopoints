@@ -27,32 +27,15 @@
 ```
 caopoints
 ├─ .firebaserc
-├─ .idea
-│  ├─ caopoints.iml
-│  ├─ libraries
-│  │  └─ site_dir.xml
-│  ├─ modules.xml
-│  ├─ vcs.xml
-│  └─ workspace.xml
 ├─ .vscode
-│  ├─ extensions.json
-│  ├─ settings.json
-│  └─ tasks.json
-├─ cors.json
 ├─ esbuild.config.js
-├─ firebase.json
-├─ logos
-│  ├─ logo1.webp
-│  └─ logo2.webp
-├─ media
-│  ├─ caopoints-demo.mp4
-│  ├─ credit.txt
-│  ├─ keep-it-kinetic-moire-main-version-00-36-15392.mp3
-│  ├─ logo.webp
-│  ├─ promotional video.mp4
-│  └─ slogan.webp
-├─ package-lock.json
-├─ package.json
+├─ main.py
+├─ previous_database
+│  └─ caopoints-info.appspot.com
+│     ├─ false_grades
+│     ├─ false_points
+│     ├─ true_grades
+│     └─ true_points
 ├─ privacy policy.html
 ├─ public
 │  ├─ 404.html
@@ -61,8 +44,11 @@ caopoints
 │  ├─ about_style.css
 │  ├─ bundle.js
 │  ├─ config.js
-│  ├─ cors.json
-│  ├─ dom-support.js
+│  ├─ grades_and_points
+│  │  ├─ false_grades
+│  │  ├─ false_points
+│  │  ├─ true_grades
+│  │  └─ true_points
 │  ├─ home.js
 │  ├─ images
 │  │  ├─ emmanuel.webp
@@ -75,13 +61,8 @@ caopoints
 │  │  ├─ points-system.webp
 │  │  └─ twitter.webp
 │  ├─ index.html
-│  ├─ index_style.css
-│  ├─ main.py
-│  └─ progressier.js
+│  └─ index_style.css
 ├─ README.md
-├─ resources.txt
-├─ rollup.config.js
-├─ todo.txt
-└─ update.bat
+└─ rollup.config.js
 
 ```

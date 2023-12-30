@@ -7,7 +7,7 @@
 
 /* Custom variables for color scheme */
 :root {
-    --main-text-color: #ffffff;
+    --main-text-color: white;
     --primary: #0080ff;
     --bg-color: black;
     --secondary: #001952;
@@ -21,36 +21,31 @@ body {
     margin: auto;
     color: var(--main-text-color);
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 
 .logo-container {
+    display: flex;
+    padding: 13px;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: white;
-    width: 200px;
     align-items: center;
-  }
+    text-align: center;
+}
 
 .logo {
     margin: auto;
-    width: 100%;
-}
-
-.nav {
-    width: 50%;
-    align-items: center;
     text-align: center;
-}
-
-.nav-list {
-    list-style: none;
+    width: 250px;
 }
 
 .nav-link {
+    margin: auto;
     text-decoration: none;
     text-align: center;
-    color: var(--main-text-color);
+    color: black;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -61,6 +56,16 @@ body {
 
 .selected {
     color: var(--accent-color);
+}
+
+#img-float {
+    float: left;
+}
+
+#nav-options {
+    align-items: center;
+    vertical-align: middle;
+    float: right;
 }
 
 .title {
@@ -152,11 +157,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Desktop */
 @media only screen and (min-width: 768px) {
-    .logo {
-        width: 250px;
-    }
-
     .logo-container {
         width: auto;
         align-items: center;

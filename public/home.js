@@ -390,12 +390,17 @@ function update_inputs() {
 
 update_inputs();
 
+document.getElementById("result_container").classList.add("hide");
+
 /**
  * collects the data values from the HTML (target_num, hl_num, ol_num)
  * handles error cases and successfull output
  */
 document.getElementById("invalid_input").style.display = "none";
 async function find_points_needed() {
+  document.getElementById("result_container").classList.add("show");
+  document.getElementById("result_container").classList.remove("hide");
+
   target_num = Number(document.getElementById("target_text").value);
   hl_num = Number(document.getElementById("hl_subs_text").value);
   ol_num = Number(document.getElementById("ol_subs_text").value);
@@ -422,11 +427,9 @@ async function find_points_needed() {
   }
 
   if (error_status != "") {
-    // if the invalid_input DOM's isn't speficied HTML thinks it doesn't exist ------
     document.getElementById("invalid_input").style.display = "block";
     document.getElementById("invalid_input").style.color = "red";
     document.getElementById("invalid_input").innerHTML = error_status;
-    // --------------
 
     document.getElementById("info_container").style.opacity = "1";
     document.getElementById("soultion_output").style.display = "none";
@@ -493,6 +496,6 @@ if ([3, 4, 5].includes(month)) {
   motivate();
 }
 
-if (location.href != "https://caopoints.com") {
-  location.href = "https://caopoints.com";
-}
+// if (location.href != "https://caopoints.com") {
+//   location.href = "https://caopoints.com";
+// }

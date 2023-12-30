@@ -6,7 +6,7 @@
 }
 
 :root {
-  --main-text-color: white;
+  --main-text-color: black;
   --primary: #0080ff;
   --bg-color: black;
   --secondary: #001952;
@@ -15,12 +15,12 @@
 
 
 body {
+  align-items: center;
   min-width: 330px;
   width: 100%;
-  margin: auto;
   color: var(--main-text-color);
   background-color: var(--bg-color);
-  align-items: center;
+  overflow-x: hidden;
 }
 
 .header {
@@ -34,29 +34,23 @@ body {
 }
 
 .logo-container {
+  display: flex;
+  padding: 13px;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: white;
-  width: 200px;
   align-items: center;
+  text-align: center;
 }
 
 .logo {
   margin: auto;
   text-align: center;
-  width: 100%;
-}
-
-.nav {
-  width: 50%;
-  align-items: center;
-}
-
-.nav-list {
-  list-style: none;
+  width: 250px;
 }
 
 .nav-link {
+  margin: auto;
   text-decoration: none;
   text-align: center;
   color: var(--main-text-color);
@@ -71,6 +65,16 @@ body {
 .selected {
   color: var(--accent);
   transition: 0.2s;
+}
+
+#img-float {
+  float: left;
+}
+
+#nav-options {
+  align-items: center;
+  vertical-align: middle;
+  float: right;
 }
 
 .welcome {
@@ -155,7 +159,7 @@ input::-webkit-inner-spin-button {
   color: var(--main-text-color);
 }
 
-/* for mobile users */
+/* Mobile  */
 @media screen and (max-width: 500px) {
 
   input[type="number"],
@@ -170,8 +174,10 @@ input::-webkit-inner-spin-button {
   color: var(--primary);
   font-weight: bold;
   background-color: #2d3436;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
+  border: 5px solid var(--primary);
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
 }
 
 .results-content {
@@ -187,18 +193,15 @@ input::-webkit-inner-spin-button {
 
 .motivation {
   margin: auto;
-  text-align: center;
-  padding: 20px 0;
+  width: 100%;
 }
 
 .motivation-image {
   width: 100%;
-  max-width: 800px;
-  height: auto;
 }
 
 .info {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   padding: 15px;
   color: var(--main-text-color);
 }
@@ -206,6 +209,7 @@ input::-webkit-inner-spin-button {
 .info-content {
   text-align: center;
   margin: auto;
+  color: white;
 }
 
 .info p {
@@ -221,12 +225,12 @@ input::-webkit-inner-spin-button {
 }
 
 #cao-link:hover {
-  color: var(--primary);
+  color: red;
 }
 
 .footer {
   text-align: center;
-  background-color: var(--primary);
+  background-color: black;
   font-size: 14px;
   padding: 10px;
 }
@@ -248,14 +252,22 @@ input::-webkit-inner-spin-button {
   color: red;
 }
 
-@media only screen and (min-width: 768px) {
-  .logo {
-    width: 250px;
-  }
+.white {
+  color: white;
+}
 
-  .logo-container {
-    width: auto;
-    align-items: center;
-    text-align: center;
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .motivation {
+    width: 50%;
+    border-radius: 20px;
   }
 }

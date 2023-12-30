@@ -71,8 +71,5 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# progressier.js for PWA
-.progressier.js
-
 # git
 .git
