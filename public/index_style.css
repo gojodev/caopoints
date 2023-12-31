@@ -10,7 +10,7 @@
   --primary: #0080ff;
   --bg-color: black;
   --secondary: #001952;
-  --accent: #fdcb6e;
+  --accent: orange;
 }
 
 
@@ -51,20 +51,51 @@ body {
 
 .nav-link {
   margin: auto;
+  padding: 8px;
   text-decoration: none;
   text-align: center;
-  color: var(--main-text-color);
+  color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: var(--primary);
+.pulseAnimation {
+  opacity: 0.85;
+
+  animation-name: navOptions;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transition: 0.2s;
+}
+
+@keyframes navOptions {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+a:visited {
+  color: white;
 }
 
 .selected {
   color: var(--accent);
   transition: 0.2s;
+}
+
+.special-background {
+  opacity: 0.85;
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.special-background:hover {
+  opacity: 1;
 }
 
 #img-float {
@@ -99,7 +130,6 @@ body {
 }
 
 .calculator {
-  background-color: var(--secondary);
   padding: 40px 0;
   text-align: center;
 }
@@ -166,6 +196,11 @@ input::-webkit-inner-spin-button {
   select {
     text-align: center;
   }
+
+  .calculator {
+    background-color: white;
+    color: black;
+  }
 }
 
 .results {
@@ -176,13 +211,13 @@ input::-webkit-inner-spin-button {
   background-color: #2d3436;
   border: 5px solid var(--primary);
   border-radius: 20px;
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 
 .results-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .results h2,
@@ -217,17 +252,6 @@ input::-webkit-inner-spin-button {
   margin-bottom: 10px;
 }
 
-#cao-link {
-  color: var(--accent);
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#cao-link:hover {
-  color: red;
-}
-
 .footer {
   text-align: center;
   background-color: black;
@@ -256,6 +280,10 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
+.black {
+  color: black;
+}
+
 .show {
   display: block;
 }
@@ -269,5 +297,10 @@ input::-webkit-inner-spin-button {
   .motivation {
     width: 50%;
     border-radius: 20px;
+  }
+
+  .calculator {
+    background-color: var(--secondary);
+    color: white;
   }
 }

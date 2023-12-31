@@ -11,7 +11,7 @@
     --primary: #0080ff;
     --bg-color: black;
     --secondary: #001952;
-    --accent-color: #fdcb6e;
+    --accent: orange;
 }
 
 /* Set default font styles */
@@ -43,19 +43,52 @@ body {
 
 .nav-link {
     margin: auto;
+    padding: 8px;
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.nav-link:hover {
-    color: var(--primary);
+.pulseAnimation {
+    opacity: 0.85;
+
+    animation-name: navOptions;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition: 0.2s;
+}
+
+@keyframes navOptions {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+a:visited {
+    color: white;
 }
 
 .selected {
-    color: var(--accent-color);
+    color: var(--accent);
+    transition: 0.2s;
+}
+
+.special-background {
+    opacity: 0.85;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.special-background:hover {
+    opacity: 1;
 }
 
 #img-float {
@@ -82,8 +115,6 @@ body {
     background-color: var(--bg-color);
 }
 
-
-/* Motivation image styles */
 #img-info {
     display: flex;
     justify-content: center;
@@ -96,13 +127,11 @@ body {
     text-align: center;
 }
 
-/* Content box styles */
 .general_background {
     background-color: var(--secondary);
-    /* Dark blue background */
     padding: 15px;
     color: var(--main-text-color);
-
+    border-radius: 20px;
     margin: 10px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -113,7 +142,6 @@ body {
     color: var(--primary);
 }
 
-/* Founder's information styles */
 #emmanuel-container {
     text-align: center;
     margin-top: 20px;
@@ -136,7 +164,7 @@ body {
 }
 
 #founder-text {
-    color: var(--accent-color);
+    color: var(--accent);
     /* Accent color for founder's title */
     margin-top: 5px;
     font-weight: bold;

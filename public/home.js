@@ -390,6 +390,7 @@ function update_inputs() {
 
 update_inputs();
 
+// to hide the box of output when the page loades
 document.getElementById("result_container").classList.add("hide");
 
 /**
