@@ -196,11 +196,6 @@ input::-webkit-inner-spin-button {
   select {
     text-align: center;
   }
-
-  .calculator {
-    background-color: white;
-    color: black;
-  }
 }
 
 .results {
@@ -297,10 +292,5 @@ input::-webkit-inner-spin-button {
   .motivation {
     width: 50%;
     border-radius: 20px;
-  }
-
-  .calculator {
-    background-color: var(--secondary);
-    color: white;
   }
 }

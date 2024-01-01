@@ -1,7 +1,10 @@
 "use strict";
 import { firebaseConfig } from "./config.js";
-
 firebaseConfig();
+
+const DarkReader = require('darkreader');
+DarkReader.setFetchMethod(window.fetch);
+DarkReader.auto();
 
 // ! this value is global and will be accessed by other functions
 var add_25 = 25;
@@ -174,6 +177,31 @@ function adjustor(letter_grades) {
   }
 
   return letter_grades;
+}
+
+/**
+ * yearly joke that will be activated in may and june
+ */
+function motivate() {
+  seconds += 1;
+  if (59 <= seconds && seconds <= 60) {
+    document.getElementById("img-info").src = "images/joke.webp";
+  }
+  else {
+    document.getElementById("img-info").src = "images/points-system.webp";
+  }
+
+  if (seconds > 60) {
+    seconds = 0;
+  }
+}
+
+var seconds = 0;
+var dt = new Date();
+var month = dt.getMonth() + 1; // cause of 0 indexing of the 12 months becomes 0 - 11
+if ([3, 4, 5].includes(month)) {
+  setInterval(motivate, 1000);
+  motivate();
 }
 
 /**
@@ -393,11 +421,31 @@ update_inputs();
 // to hide the box of output when the page loades
 document.getElementById("result_container").classList.add("hide");
 
+
+
+
 /**
  * collects the data values from the HTML (target_num, hl_num, ol_num)
  * handles error cases and successfull output
  */
 document.getElementById("invalid_input").style.display = "none";
+
+function pulseInputs() {
+  let inputElement = ["target_text", "hl_subs_text", "ol_subs_text", "bool_hl_maths", "lcvp"];
+
+  inputElement.forEach(id => {
+    document.getElementById(id).classList.add("pulseAnimation");
+  });
+
+  document.getElementById("calculator-container").addEventListener('click', () => {
+    inputElement.forEach(id => {
+      document.getElementById(id).classList.remove("pulseAnimation");
+    });
+  });
+}
+
+pulseInputs();
+
 async function find_points_needed() {
   document.getElementById("result_container").classList.add("show");
   document.getElementById("result_container").classList.remove("hide");
@@ -471,32 +519,3 @@ async function find_points_needed() {
     document.getElementById("grade_avg_req").innerHTML = String(grade_avg);
   }
 }
-
-/**
- * yearly joke that will be activated in may and june
- */
-function motivate() {
-  seconds += 1;
-  if (59 <= seconds && seconds <= 60) {
-    document.getElementById("img-info").src = "images/joke.webp";
-  }
-  else {
-    document.getElementById("img-info").src = "images/points-system.webp";
-  }
-
-  if (seconds > 60) {
-    seconds = 0;
-  }
-}
-
-var seconds = 0;
-var dt = new Date();
-var month = dt.getMonth() + 1; // cause of 0 indexing of the 12 months becomes 0 - 11
-if ([3, 4, 5].includes(month)) {
-  setInterval(motivate, 1000);
-  motivate();
-}
-
-// if (location.href != "https://caopoints.com") {
-//   location.href = "https://caopoints.com";
-// }
