@@ -59,6 +59,10 @@ body {
   transition: color 0.3s;
 }
 
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
 .pulseAnimation {
   opacity: 0.85;
 
@@ -99,13 +103,24 @@ a:visited {
 }
 
 #img-float {
+  transition: 0.2s;
   float: left;
 }
 
-#nav-options {
+#img-float:hover {
+  transform: scale(1.05);
+}
+
+.nav-options {
+  margin: auto;
   align-items: center;
   vertical-align: middle;
-  float: right;
+}
+
+.flexBox_DropDown {
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .welcome {
@@ -285,6 +300,48 @@ input::-webkit-inner-spin-button {
 
 .hide {
   display: none;
+  visibility: hidden;
+}
+
+.dropdown {
+  top: 0;
+  display: flex;
+  position: sticky;
+  background-color: white;
+  padding-bottom: 5px;
+  width: 100%;
+  margin: 0;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  transition: 0.2s;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid var(--accent);
+}
+
+.marked_triangle {
+  border-left: 25px solid red;
+}
+
+.halfDead {
+  opacity: 0.2;
+}
+
+.transparent {
+  background: transparent;
 }
 
 /* Desktop */

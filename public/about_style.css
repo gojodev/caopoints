@@ -51,6 +51,10 @@ body {
     transition: color 0.3s;
 }
 
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
 .pulseAnimation {
     opacity: 0.85;
 
@@ -95,10 +99,16 @@ a:visited {
     float: left;
 }
 
-#nav-options {
+.nav-options {
+    margin: auto;
     align-items: center;
     vertical-align: middle;
-    float: right;
+}
+
+.flexBox_DropDown {
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 
 .title {
@@ -183,6 +193,10 @@ a:visited {
 
 #self_desc {
     font-family: 'Courier New', Courier, monospace;
+}
+
+.right {
+    float: right;
 }
 
 /* Desktop */

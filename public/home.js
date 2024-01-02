@@ -4,7 +4,7 @@ firebaseConfig();
 
 const DarkReader = require('darkreader');
 DarkReader.setFetchMethod(window.fetch);
-DarkReader.auto();
+// DarkReader.auto();
 
 // ! this value is global and will be accessed by other functions
 var add_25 = 25;
@@ -519,3 +519,40 @@ async function find_points_needed() {
     document.getElementById("grade_avg_req").innerHTML = String(grade_avg);
   }
 }
+
+function dropdownMenu() {
+  var dropdown = document.getElementById("dropdown");
+  var triangle = document.getElementById("triangle");
+  var logoContainer = document.querySelector(".welcome");
+
+  // Hide the dropdown initially
+  dropdown.style.display = "none";
+
+  function isScrollPastLogoContainer() {
+    var logoContainerRect = logoContainer.getBoundingClientRect();
+    return logoContainerRect.bottom < 0;
+  }
+
+  triangle.addEventListener("click", () => {
+    triangle.classList.toggle("marked_triangle");
+    document.getElementById("flexBox_DropDown").classList.toggle("hide");
+    dropdown.classList.toggle("transparent");
+  });
+
+  function handleScroll() {
+    if (isScrollPastLogoContainer()) {
+      dropdown.style.display = "flex";
+    }
+    else {
+      dropdown.style.display = "none";
+    }
+  }
+
+  // Attach the scroll event listener
+  window.addEventListener("scroll", handleScroll);
+
+  // Trigger the initial check
+  handleScroll();
+}
+
+dropdownMenu();

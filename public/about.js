@@ -11,3 +11,56 @@ function about_me() {
 }
 
 about_me();
+
+function dropdownMenu() {
+  var dropdown = document.getElementById("dropdown");
+  var logoContainer = document.querySelector(".general_background");
+
+  // Hide the dropdown initially
+  dropdown.style.display = "none";
+
+  function isScrollPastLogoContainer() {
+    var logoContainerRect = logoContainer.getBoundingClientRect();
+    return logoContainerRect.bottom < 0;
+  }
+
+  function handleScroll() {
+    if (isScrollPastLogoContainer()) {
+      dropdown.style.display = "flex";
+    } else {
+      dropdown.style.display = "none";
+    }
+  }
+
+  // Attach the scroll event listener
+  window.addEventListener("scroll", handleScroll);
+
+  // Trigger the initial check
+  handleScroll();
+}
+
+dropdownMenu();
+
+function triangleToggle() {
+  let triangle = document.getElementById("triangle");
+  let dropdown = document.getElementById("dropdown");
+  let message = "💀";
+  dropdown.style.transition = "0.2s";
+  dropdown.addEventListener("mouseover", () => {
+    triangle.innerHTML = message;
+  })
+
+  dropdown.addEventListener("mouseout", () => {
+    triangle.innerHTML = "";
+  })
+
+  dropdown.addEventListener("click", () => {
+    triangle.innerHTML = message;
+    setTimeout(() => {
+      // give the user 2 seconds to see the notice
+      triangle.innerHTML = "";
+    }, 2000);
+  });
+}
+
+triangleToggle()
