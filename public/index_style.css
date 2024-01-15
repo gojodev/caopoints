@@ -82,6 +82,7 @@ body {
   }
 }
 
+a:link,
 a:visited {
   color: white;
 }
@@ -92,18 +93,13 @@ a:visited {
 }
 
 .special-background {
-  opacity: 0.85;
   background-color: black;
   padding: 10px;
   border-radius: 20px;
 }
 
-.special-background:hover {
-  opacity: 1;
-}
-
 #img-float {
-  transition: 0.2s;
+  transition: 0.3s;
   float: left;
 }
 
@@ -351,6 +347,23 @@ input::-webkit-inner-spin-button {
 
 #logo_dropDown:hover {
   transform: scale(1.05);
+}
+
+#welcome {
+  animation: welcomeAni;
+  animation-duration: 1s;
+  transition: 0.5s;
+}
+
+@keyframes welcomeAni {
+  from {
+    opacity: 0;
+    transform: translate(0, -15px);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Desktop */
