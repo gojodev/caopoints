@@ -522,7 +522,13 @@ async function find_points_needed() {
 
 function gojodevIcon() {
   let gojodev = document.getElementById("fixed-gojodev");
-  let welcome = document.querySelector(".calculator");
+  let welcome;
+  if (window.innerWidth > 500) {
+    welcome = document.querySelector(".welcome");
+  }
+  else {
+    welcome = document.querySelector(".calculator");
+  }
   gojodev.style.display = "none";
 
   function isVisible() {
