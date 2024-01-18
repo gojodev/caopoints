@@ -73,6 +73,3 @@ node_modules/
 
 # git
 .git
-
-#config (mainly for firebase)
-.config.js
