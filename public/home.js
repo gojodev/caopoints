@@ -1,9 +1,9 @@
 "use strict";
-import { firebaseConfig } from "./config.js";
-firebaseConfig();
 
 const DarkReader = require('darkreader');
 DarkReader.setFetchMethod(window.fetch);
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 // DarkReader.auto();
 
 // ! this value is global and will be accessed by other functions
@@ -288,7 +288,7 @@ function gar_and_ptg(points_needed) {
 function display_plus_25(bool_hl_maths) {
   var adding_25_container = document.getElementById("adding_25_container");
   if (bool_hl_maths) {
-    adding_25_container.style = "display: block;color: #0066ff";
+    adding_25_container.style = "display: block;";
   } else {
     adding_25_container.style.display = "none";
   }
@@ -520,39 +520,51 @@ async function find_points_needed() {
   }
 }
 
-function dropdownMenu() {
-  var dropdown = document.getElementById("dropdown");
-  var triangle = document.getElementById("triangle");
-  var logoContainer = document.querySelector(".welcome");
+function gojodevIcon() {
+  let gojodev = document.getElementById("fixed-gojodev");
+  let welcome = document.querySelector(".calculator");
+  gojodev.style.display = "none";
 
-  // Hide the dropdown initially
-  dropdown.style.display = "none";
-
-  function isScrollPastLogoContainer() {
-    var logoContainerRect = logoContainer.getBoundingClientRect();
-    return logoContainerRect.bottom < 0;
+  function isVisible() {
+    var welcomeRect = welcome.getBoundingClientRect();
+    return welcomeRect.bottom < 0;
   }
-
-  triangle.addEventListener("click", () => {
-    triangle.classList.toggle("marked_triangle");
-    document.getElementById("flexBox_DropDown").classList.toggle("hide");
-    dropdown.classList.toggle("transparent");
-  });
 
   function handleScroll() {
-    if (isScrollPastLogoContainer()) {
-      dropdown.style.display = "flex";
+    if (isVisible()) {
+      gojodev.style.display = "block";
     }
     else {
-      dropdown.style.display = "none";
+      gojodev.style.display = "none";
     }
   }
 
-  // Attach the scroll event listener
   window.addEventListener("scroll", handleScroll);
 
-  // Trigger the initial check
   handleScroll();
 }
 
-dropdownMenu();
+gojodevIcon();
+
+function gojodev() {
+  let emmanuel = document.getElementById("gojodev");
+  let index = 0;
+  setInterval(() => {
+
+    emmanuel.classList.remove("fadeIn");
+    emmanuel.offsetWidth;
+    emmanuel.classList.add("fadeIn");
+
+    if (index == 0) {
+      emmanuel.src = "images/gojodev.webp";
+
+      index = 1;
+    }
+    else {
+      emmanuel.src = "images/logo.webp";
+      index = 0;
+    }
+  }, 3500)
+}
+
+gojodev()

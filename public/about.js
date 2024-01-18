@@ -1,66 +1,45 @@
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
 function about_me() {
   var bday = new Date("06/08/2004");
   var today = new Date();
 
   // To calculate the time difference of two dates 
-  var Difference_In_Time = today.getTime() - bday.getTime();
-  Difference_In_Time = (Difference_In_Time / 1000) / 31556952;
+  var time_diff = today.getTime() - bday.getTime();
+  time_diff = (time_diff / 1000) / 31556952;
 
-  let age = Difference_In_Time.toFixed(3);
+  let age = time_diff.toFixed(3);
   document.getElementById("founder-name").innerHTML = `Emmanuel Koledoye (~${age})`;
 }
 
 about_me();
 
-function dropdownMenu() {
-  var dropdown = document.getElementById("dropdown");
-  var logoContainer = document.querySelector(".general_background");
+function gojodev() {
+  let gojodev = document.getElementById("gojodev");
+  let emmanuel = document.getElementById("emmanuel");
+  let index = 0;
+  setInterval(() => {
 
-  // Hide the dropdown initially
-  dropdown.style.display = "none";
+    gojodev.classList.remove("fadeIn");
+    gojodev.offsetWidth;
+    gojodev.classList.add("fadeIn");
 
-  function isScrollPastLogoContainer() {
-    var logoContainerRect = logoContainer.getBoundingClientRect();
-    return logoContainerRect.bottom < 0;
-  }
+    if (index == 0) {
+      emmanuel.style = "border-radius: 50%";
+      emmanuel.src = "images/gojodev.webp";
 
-  function handleScroll() {
-    if (isScrollPastLogoContainer()) {
-      dropdown.style.display = "flex";
-    } else {
-      dropdown.style.display = "none";
+      gojodev.src = "images/gojodev.webp";
+      index = 1;
     }
-  }
+    else {
+      emmanuel.style = "border-radius: 20px";
+      emmanuel.src = "images/emmanuel.webp";
 
-  // Attach the scroll event listener
-  window.addEventListener("scroll", handleScroll);
-
-  // Trigger the initial check
-  handleScroll();
+      gojodev.src = "images/logo.webp";
+      index = 0;
+    }
+  }, 3500)
 }
 
-dropdownMenu();
-
-function triangleToggle() {
-  let triangle = document.getElementById("triangle");
-  let dropdown = document.getElementById("dropdown");
-  let message = "💀";
-  dropdown.style.transition = "0.2s";
-  dropdown.addEventListener("mouseover", () => {
-    triangle.innerHTML = message;
-  })
-
-  dropdown.addEventListener("mouseout", () => {
-    triangle.innerHTML = "";
-  })
-
-  dropdown.addEventListener("click", () => {
-    triangle.innerHTML = message;
-    setTimeout(() => {
-      // give the user 2 seconds to see the notice
-      triangle.innerHTML = "";
-    }, 2000);
-  });
-}
-
-triangleToggle()
+gojodev()

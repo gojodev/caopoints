@@ -44,9 +44,10 @@ body {
 }
 
 .logo {
-  margin: auto;
+  margin: 13px;
   text-align: center;
-  width: 250px;
+  width: 120px;
+  height: 120px;
 }
 
 .nav-link {
@@ -64,15 +65,14 @@ body {
 }
 
 .pulseAnimation {
-  opacity: 0.85;
-
-  animation-name: navOptions;
+  opacity: 1;
+  animation-name: pulseAni;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   transition: 0.2s;
 }
 
-@keyframes navOptions {
+@keyframes pulseAni {
   from {
     opacity: 0.5;
   }
@@ -173,18 +173,25 @@ select {
   width: 90%;
   padding: 10px;
   font-weight: bold;
-  border: none;
   border-bottom: 1px solid var(--main-text-color);
+  border-top-left-radius: 20px;
   background-color: var(--primary);
   color: var(--main-text-color);
   font-size: 16px;
   margin-top: 5px;
   transition: border, color 0.3s;
-  border-radius: 20px;
+  transition: 0.3s;
+}
+
+input[type="number"]:hover,
+select:hover {
+  border-bottom-left-radius: 20px;
+
 }
 
 input[type="number"]:focus,
 select:focus {
+  border-bottom-left-radius: 20px;
   border-color: var(--accent);
 }
 
@@ -215,7 +222,7 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   color: var(--primary);
   font-weight: bold;
-  background-color: #2d3436;
+  background-color: white;
   border: 5px solid var(--primary);
   border-radius: 20px;
   width: 85%;
@@ -267,12 +274,12 @@ input::-webkit-inner-spin-button {
 }
 
 #adding_25_text {
-  color: var(--accent);
+  color: red;
 }
 
 .info_output {
   font-weight: bold;
-  color: var(--accent);
+  color: black;
 }
 
 .grey {
@@ -300,16 +307,6 @@ input::-webkit-inner-spin-button {
   visibility: hidden;
 }
 
-.dropdown {
-  top: 0;
-  display: flex;
-  position: sticky;
-  background-color: white;
-  width: 100%;
-  opacity: 0.8;
-  z-index: 1;
-}
-
 .left {
   float: left;
 }
@@ -318,44 +315,20 @@ input::-webkit-inner-spin-button {
   float: right;
 }
 
-.triangle {
-  width: 0;
-  height: 0;
-  transition: 0.2s;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid var(--accent);
-}
-
-.marked_triangle {
-  border-left: 40px solid red;
-}
-
-.halfDead {
-  opacity: 0.2;
-}
 
 .transparent {
   background: transparent;
 }
 
-#logo_dropDown {
-  width: 100%;
-  height: 85px;
-  transition: 0.2s;
+.fadeIn {
+  animation: fadeInAni;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 
-#logo_dropDown:hover {
-  transform: scale(1.05);
-}
 
-#welcome {
-  animation: welcomeAni;
-  animation-duration: 1s;
-  transition: 0.5s;
-}
 
-@keyframes welcomeAni {
+@keyframes fadeInAni {
   from {
     opacity: 0;
     transform: translate(0, -15px);
@@ -364,6 +337,20 @@ input::-webkit-inner-spin-button {
   to {
     opacity: 1;
   }
+}
+
+#fixed-gojodev {
+  width: 85px;
+  margin: 10px;
+  opacity: 0.5;
+  transition: 0.2s;
+  position: sticky;
+  top: 0;
+}
+
+#fixed-gojodev:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 /* Desktop */

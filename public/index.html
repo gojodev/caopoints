@@ -9,10 +9,12 @@
 </head>
 
 <body>
-  <div class="header title" id="welcome">
+  <div class="header title fadeIn">
     <div class="logo-container">
       <div id="img-float">
-        <img src="images/logo.webp" alt="CaoPoints Logo" class="logo">
+        <a href="https://gojodev.com" alt="gojodev home page" target="_blank">
+          <img src="images/logo.webp" alt="CaoPoints Logo" class="logo" id="gojodev">
+        </a>
       </div>
 
       <div class="nav-options right">
@@ -46,24 +48,9 @@
     </div>
   </section>
 
-  <div class="dropdown" id="dropdown">
-    <div class="triangle pulseAnimation" id="triangle"></div>
-
-    <div class="nav-options flexBox_DropDown" id="flexBox_DropDown">
-      <div class="nav-link selected special-background pulseAnimation left">
-        <a href="index.html">
-          <h3 class="selected">Home</h3>
-        </a>
-      </div>
-
-      <div class="nav-link special-background pulseAnimation right">
-        <a href="about.html">
-          <h3>About</h3>
-        </a>
-      </div>
-      <img id="logo_dropDown" class="right" alt="logo icon" src="images/favicon.ico">
-    </div>
-  </div>
+  <a href="https://gojodev.com" alt="gojodev.com" target="_blank">
+    <img src="images/gojodev.webp" alt="gojodev" id="fixed-gojodev" class="fadeIn pulseAnimation">
+  </a>
 
   <section class="calculator" id="calculator-container">
     <br>
@@ -133,7 +120,7 @@
 
   <section class="info">
     <div class="info-content">
-      <h3>CAO Stands for <a href="https://www.cao.ie/" target="_blank" style="color: red;"
+      <h3>CAO Stands for <a href="https://www.cao.ie/" target="_blank" style="color: black;"
           class="pulseAnimation">Central Applications
           Office</a>
         They process applications for Irish Leaving Cert students for third-level education.</h3>
@@ -143,7 +130,7 @@
   </section>
 
   <footer class="footer white">
-    <h3>&copy; 2023 CaoPoints - Emmanuel Koledoye (GojoDev) </h3>
+    <h3>&copy; GojoDev <strong id="year"></strong> </h3>
   </footer>
 
   <script async type="module" src="./bundle.js"></script>
