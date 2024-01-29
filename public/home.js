@@ -295,7 +295,8 @@ function display_plus_25(bool_hl_maths) {
 }
 
 function red_commas(grades) {
-  grades = grades.toString();
+  // grades = grades.toString();
+  grades = document.getElementById("req_results").innerHTML;
   grades = grades.replaceAll(",", "<strong class='important-red'>,</strong>");
 
   return grades;
@@ -420,14 +421,6 @@ update_inputs();
 
 // to hide the box of output when the page loades
 document.getElementById("result_container").classList.add("hide");
-
-
-
-
-/**
- * collects the data values from the HTML (target_num, hl_num, ol_num)
- * handles error cases and successfull output
- */
 document.getElementById("invalid_input").style.display = "none";
 
 function pulseInputs() {
@@ -445,6 +438,29 @@ function pulseInputs() {
 }
 
 pulseInputs();
+
+function loadAnswers(letterGrade_Array) {
+  let slot;
+  let i = 0;
+  let gradeInerval = setInterval(() => {
+    if (i < letterGrade_Array.length) {
+      slot = document.getElementById(`slot${i + 1}`);
+
+      slot.style.transition = "0.2S";
+      // next indivudally increase
+      slot.innerHTML = letterGrade_Array[i];
+      slot.classList.add("opac1");
+      slot.classList.add("fadeInAni");
+      i++;
+    }
+    else {
+      clearInterval(gradeInerval);
+    }
+
+  }, 100)
+}
+
+
 
 async function find_points_needed() {
   document.getElementById("result_container").classList.add("show");
@@ -512,6 +528,10 @@ async function find_points_needed() {
     var grade_avg = output_info[0];
     var req_results = output_info[1]; // these are letter grades
 
+    console.log("req_results: ", req_results)
+    // todo:  add the loading animations here
+    loadAnswers(req_results);
+
     req_results = red_commas(req_results);
 
     document.getElementById("points_req").innerHTML = String(points_req);
@@ -563,7 +583,6 @@ function gojodev() {
 
     if (index == 0) {
       emmanuel.src = "images/gojodev.webp";
-
       index = 1;
     }
     else {

@@ -53,16 +53,12 @@ caopoints
 │  ├─ images
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
-│  │  ├─ GitHub.webp
+│  │  ├─ gojodev.webp
 │  │  ├─ joke.webp
-│  │  ├─ kofi.webp
-│  │  ├─ LinkedIn.webp
 │  │  ├─ logo.webp
-│  │  ├─ points-system.webp
-│  │  └─ twitter.webp
+│  │  └─ points-system.webp
 │  ├─ index.html
 │  └─ index_style.css
-├─ README.md
-└─ rollup.config.js
+└─ README.md
 
 ```

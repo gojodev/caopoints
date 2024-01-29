@@ -327,6 +327,13 @@ input::-webkit-inner-spin-button {
 }
 
 
+.opac0 {
+  opacity: 0;
+}
+
+.opac1 {
+  opacity: 1;
+}
 
 @keyframes fadeInAni {
   from {
@@ -342,7 +349,7 @@ input::-webkit-inner-spin-button {
 #fixed-gojodev {
   width: 85px;
   margin: 10px;
-  opacity: 0.5;
+  opacity: 0;
   transition: 0.2s;
   position: sticky;
   top: 0;
