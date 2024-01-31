@@ -282,6 +282,8 @@ function gar_and_ptg(points_needed) {
   var percentage_avg = String(Math.round(total)) + "%";
   grades_soultion = adjustor(grades_soultion);
 
+
+  // percentage as a string, an array of grades as numbers
   return [percentage_avg, grades_soultion];
 }
 
@@ -295,8 +297,7 @@ function display_plus_25(bool_hl_maths) {
 }
 
 function red_commas(grades) {
-  // grades = grades.toString();
-  grades = document.getElementById("req_results").innerHTML;
+  grades = grades.toString();
   grades = grades.replaceAll(",", "<strong class='important-red'>,</strong>");
 
   return grades;
@@ -439,28 +440,51 @@ function pulseInputs() {
 
 pulseInputs();
 
-function loadAnswers(letterGrade_Array) {
-  let slot;
-  let i = 0;
-  let gradeInerval = setInterval(() => {
-    if (i < letterGrade_Array.length) {
-      slot = document.getElementById(`slot${i + 1}`);
+let hgrades = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
+let ogrades = ['o6', 'o5', 'o4', 'o3', 'o2', 'o1'];
 
-      slot.style.transition = "0.2S";
-      // next indivudally increase
-      slot.innerHTML = letterGrade_Array[i];
-      slot.classList.add("opac1");
-      slot.classList.add("fadeInAni");
-      i++;
+async function loadAnswers(grade) {
+  let foundIndex;
+  let Hfound;
+  let Ofound;
+  let slot;
+  let output;
+
+  if (hgrades.includes(grade)) {
+    Hfound = hgrades.indexOf(grade);
+    foundIndex = Hfound;
+  }
+
+  else {
+    Ofound = ogrades.indexOf(grade);
+    foundIndex = Ofound;
+  }
+
+  for (let i = 0; i < foundIndex + 1; i++) {
+    if (Hfound != undefined) {
+      output = hgrades[i];
+    }
+    else if (ogrades != undefined) {
+      output = ogrades[i];
     }
     else {
-      clearInterval(gradeInerval);
+      console.log("error: grade not found");
+      output = "??";
     }
 
-  }, 100)
+    console.log("output: ", output);
+
+    slot = document.getElementById(`slot${i + 1}`);
+
+    slot.style.transition = "0.2S";
+    // next indivudally increase
+    slot.innerHTML = output;
+    slot.classList.add("opac1");
+    slot.classList.add("fadeInAni");
+
+    await new Promise(r => setTimeout(r, 500));
+  }
 }
-
-
 
 async function find_points_needed() {
   document.getElementById("result_container").classList.add("show");
@@ -528,9 +552,14 @@ async function find_points_needed() {
     var grade_avg = output_info[0];
     var req_results = output_info[1]; // these are letter grades
 
-    console.log("req_results: ", req_results)
-    // todo:  add the loading animations here
-    loadAnswers(req_results);
+    // ! feature note ready yet
+    /* 
+     todo: add a fade in animation for each result make it pulse the gradient blue when it has loaded in and make each use the fade in animaion
+    */
+    // for (let i = 0; i < req_results.length; i++) {
+    //   console.log("req_results: ", req_results[i]);
+    //   loadAnswers(req_results[i]);
+    // }
 
     req_results = red_commas(req_results);
 
@@ -542,31 +571,39 @@ async function find_points_needed() {
 
 function gojodevIcon() {
   let gojodev = document.getElementById("fixed-gojodev");
-  let welcome;
-  if (window.innerWidth > 500) {
-    welcome = document.querySelector(".welcome");
+  let targetBottom;
+  if (window.innerWidth < 500) {
+    targetBottom = document.getElementById("bool_hl_maths");
   }
   else {
-    welcome = document.querySelector(".calculator");
+    targetBottom = document.querySelector(".welcome");
   }
   gojodev.style.display = "none";
 
   function isVisible() {
-    var welcomeRect = welcome.getBoundingClientRect();
+    var welcomeRect = targetBottom.getBoundingClientRect();
     return welcomeRect.bottom < 0;
   }
 
   function handleScroll() {
     if (isVisible()) {
       gojodev.style.display = "block";
+      gojodev.style.opacity = "0.5";
     }
     else {
       gojodev.style.display = "none";
+      gojodev.style.opacity = "0";
     }
   }
 
   window.addEventListener("scroll", handleScroll);
+  gojodev.addEventListener("mouseover", () => {
+    gojodev.style.opacity = "1";
+  });
 
+  gojodev.addEventListener("mouseout", () => {
+    gojodev.style.opacity = "0.5";
+  })
   handleScroll();
 }
 

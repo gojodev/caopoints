@@ -157,6 +157,9 @@ a:visited {
     border-radius: 50%;
     border: 5px solid white;
     transition: transform, 0.2s;
+
+    object-fit: cover;
+    object-position: center;
 }
 
 #emmanuel:hover {

@@ -42,4 +42,4 @@ function gojodev() {
   }, 3500)
 }
 
-gojodev()
+// gojodev()
