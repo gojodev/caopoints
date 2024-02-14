@@ -30,12 +30,6 @@ caopoints
 ├─ .vscode
 ├─ esbuild.config.js
 ├─ main.py
-├─ previous_database
-│  └─ caopoints-info.appspot.com
-│     ├─ false_grades
-│     ├─ false_points
-│     ├─ true_grades
-│     └─ true_points
 ├─ privacy policy.html
 ├─ public
 │  ├─ 404.html
@@ -44,21 +38,21 @@ caopoints
 │  ├─ about_style.css
 │  ├─ bundle.js
 │  ├─ config.js
-│  ├─ grades_and_points
-│  │  ├─ false_grades
-│  │  ├─ false_points
-│  │  ├─ true_grades
-│  │  └─ true_points
 │  ├─ home.js
 │  ├─ images
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
+│  │  ├─ GitHub.webp
 │  │  ├─ gojodev.webp
 │  │  ├─ joke.webp
+│  │  ├─ kofi.webp
+│  │  ├─ LinkedIn.webp
 │  │  ├─ logo.webp
-│  │  └─ points-system.webp
+│  │  ├─ points-system.webp
+│  │  └─ twitter.webp
 │  ├─ index.html
 │  └─ index_style.css
-└─ README.md
+├─ README.md
+└─ testing.js
 
 ```

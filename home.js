@@ -1,12 +1,15 @@
 "use strict";
 
+// todo: add this website to the gojodev domain
+// ? can i use firebase for this for do i have to use namecheap to setup a subdomain or something
+
 const DarkReader = require('darkreader');
 DarkReader.setFetchMethod(window.fetch);
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // DarkReader.auto();
 
-// ! this value is global and will be accessed by other functions
+// ! GLOBAL
 var add_25 = 25;
 /**
  * determines the value of the add_25 variable
@@ -403,17 +406,17 @@ export function main(target, hl_subs, ol_subs, maths_plus_25) {
 
 function update_inputs() {
   var target_input = document.getElementById("target_text");
-  target_input.addEventListener("input", function () {
+  target_input.addEventListener("input", () => {
     find_points_needed();
   });
 
   var hl_input = document.getElementById("hl_subs_text");
-  hl_input.addEventListener("input", function () {
+  hl_input.addEventListener("input", () => {
     find_points_needed();
   });
 
   var ol_input = document.getElementById("ol_subs_text");
-  ol_input.addEventListener("input", function () {
+  ol_input.addEventListener("input", () => {
     find_points_needed();
   });
 }
@@ -440,55 +443,9 @@ function pulseInputs() {
 
 pulseInputs();
 
-let hgrades = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
-let ogrades = ['o6', 'o5', 'o4', 'o3', 'o2', 'o1'];
-
-async function loadAnswers(grade) {
-  let foundIndex;
-  let Hfound;
-  let Ofound;
-  let slot;
-  let output;
-
-  if (hgrades.includes(grade)) {
-    Hfound = hgrades.indexOf(grade);
-    foundIndex = Hfound;
-  }
-
-  else {
-    Ofound = ogrades.indexOf(grade);
-    foundIndex = Ofound;
-  }
-
-  for (let i = 0; i < foundIndex + 1; i++) {
-    if (Hfound != undefined) {
-      output = hgrades[i];
-    }
-    else if (ogrades != undefined) {
-      output = ogrades[i];
-    }
-    else {
-      console.log("error: grade not found");
-      output = "??";
-    }
-
-    console.log("output: ", output);
-
-    slot = document.getElementById(`slot${i + 1}`);
-
-    slot.style.transition = "0.2S";
-    // next indivudally increase
-    slot.innerHTML = output;
-    slot.classList.add("opac1");
-    slot.classList.add("fadeInAni");
-
-    await new Promise(r => setTimeout(r, 500));
-  }
-}
-
 async function find_points_needed() {
-  document.getElementById("result_container").classList.add("show");
   document.getElementById("result_container").classList.remove("hide");
+  document.getElementById("result_container").classList.add("show");
 
   target_num = Number(document.getElementById("target_text").value);
   hl_num = Number(document.getElementById("hl_subs_text").value);
@@ -515,20 +472,28 @@ async function find_points_needed() {
     error_status += pts_error_msg + "\n";
   }
 
-  if (error_status != "") {
-    document.getElementById("invalid_input").style.display = "block";
-    document.getElementById("invalid_input").style.color = "red";
-    document.getElementById("invalid_input").innerHTML = error_status;
+  let invalid_input = document.getElementById("invalid_input");
+  let info_container = document.getElementById("info_container");
+  let soultion_output = document.getElementById("soultion_output");
 
-    document.getElementById("info_container").style.opacity = "1";
-    document.getElementById("soultion_output").style.display = "none";
+  if (error_status != "") {
+    invalid_input.classList.remove("fadeIn");
+    invalid_input.offsetWidthl;
+    invalid_input.classList.add("fadeIn");
+
+    invalid_input.style.display = "block";
+    invalid_input.style.color = "red";
+    invalid_input.innerHTML = error_status;
+
+    info_container.style.opacity = "1";
+    soultion_output.style.display = "none";
     document.getElementById("adding_25_container").style.opacity = "0";
   }
 
   else {
-    document.getElementById("info_container").style.opacity = "1";
-    document.getElementById("info_container").style.display = "block";
-    document.getElementById("soultion_output").style.display = "block";
+    info_container.style.opacity = "1";
+    info_container.style.display = "block";
+    soultion_output.style.display = "block";
     document.getElementById("invalid_input").style.display = "none";
     var maths_plus_25;
     if (add_25 == 25) {
@@ -551,21 +516,16 @@ async function find_points_needed() {
 
     var grade_avg = output_info[0];
     var req_results = output_info[1]; // these are letter grades
-
-    // ! feature note ready yet
-    /* 
-     todo: add a fade in animation for each result make it pulse the gradient blue when it has loaded in and make each use the fade in animaion
-    */
-    // for (let i = 0; i < req_results.length; i++) {
-    //   console.log("req_results: ", req_results[i]);
-    //   loadAnswers(req_results[i]);
-    // }
-
     req_results = red_commas(req_results);
 
-    document.getElementById("points_req").innerHTML = String(points_req);
-    document.getElementById("req_results").innerHTML = String(req_results);
-    document.getElementById("grade_avg_req").innerHTML = String(grade_avg);
+
+    let elem_req_results = document.getElementById("req_results");
+
+    if (elem_req_results.value != "") {
+      document.getElementById("points_req").innerHTML = String(points_req);
+      elem_req_results.innerHTML = String(req_results);
+      document.getElementById("grade_avg_req").innerHTML = String(grade_avg);
+    }
   }
 }
 
@@ -580,6 +540,7 @@ function gojodevIcon() {
   }
   gojodev.style.display = "none";
 
+  // todo: add a fade out animation for when the user scrolls up and past the welcomeRect
   function isVisible() {
     var welcomeRect = targetBottom.getBoundingClientRect();
     return welcomeRect.bottom < 0;

@@ -315,30 +315,17 @@ input::-webkit-inner-spin-button {
   float: right;
 }
 
-
-.transparent {
-  background: transparent;
-}
-
 .fadeIn {
   animation: fadeInAni;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
 
-
-.opac0 {
-  opacity: 0;
-}
-
-.opac1 {
-  opacity: 1;
-}
-
 @keyframes fadeInAni {
   from {
     opacity: 0;
     transform: translate(0, -15px);
+    transform: scale(1.05);
   }
 
   to {
@@ -361,6 +348,12 @@ input::-webkit-inner-spin-button {
 
 #fixed-gojodev:hover {
   transform: scale(1.05);
+}
+
+/* todo: vertically center the error messages */
+#invalid_input {
+  align-items: center;
+  display: flex;
 }
 
 /* Desktop */
