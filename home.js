@@ -1,12 +1,11 @@
 "use strict";
 
-// todo: add this website to the gojodev domain
-// ? can i use firebase for this for do i have to use namecheap to setup a subdomain or something
 
 const DarkReader = require('darkreader');
 DarkReader.setFetchMethod(window.fetch);
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+// ? I might mess with darker themes later
 // DarkReader.auto();
 
 // ! GLOBAL
