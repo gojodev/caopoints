@@ -354,6 +354,9 @@ input::-webkit-inner-spin-button {
 #invalid_input {
   align-items: center;
   display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 /* Desktop */
