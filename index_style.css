@@ -222,8 +222,7 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   color: var(--primary);
   font-weight: bold;
-  background-color: white;
-  border: 5px solid var(--primary);
+  background-color: var(--primary);
   border-radius: 20px;
   width: 85%;
   margin: auto;
@@ -274,19 +273,19 @@ input::-webkit-inner-spin-button {
 }
 
 #adding_25_text {
-  color: red;
+  color: white;
 }
 
 .info_output {
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .grey {
   color: grey;
 }
 
-.important-red {
+.red {
   color: red;
 }
 
@@ -337,6 +336,7 @@ input::-webkit-inner-spin-button {
   width: 85px;
   margin: 5px;
   opacity: 0;
+  display: none;
   transition: 0.2s;
   position: sticky;
   top: 0;

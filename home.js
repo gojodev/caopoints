@@ -300,7 +300,7 @@ function display_plus_25(bool_hl_maths) {
 
 function red_commas(grades) {
   grades = grades.toString();
-  grades = grades.replaceAll(",", "<strong class='important-red'>,</strong>");
+  grades = grades.replaceAll(",", "<strong class='red'>,</strong>");
 
   return grades;
 }
@@ -537,22 +537,21 @@ function gojodevIcon() {
   else {
     targetBottom = document.querySelector(".welcome");
   }
-  gojodev.style.display = "none";
 
-  // todo: add a fade out animation for when the user scrolls up and past the welcomeRect
-  function isVisible() {
-    var welcomeRect = targetBottom.getBoundingClientRect();
-    return welcomeRect.bottom < 0;
-  }
+  gojodev.style.display = "block";
 
   function handleScroll() {
-    if (isVisible()) {
+    let welcomeRect = targetBottom.getBoundingClientRect();
+    console.log(welcomeRect.bottom)
+    if (welcomeRect.bottom < 0) {
       gojodev.style.display = "block";
-      gojodev.style.opacity = "0.5";
+      gojodev.style.opacity = "0.8";
     }
     else {
-      gojodev.style.display = "none";
+      gojodev.style = "transform: translate(0, +15px);";
+      gojodev.style.animationDelay = "0.5s";
       gojodev.style.opacity = "0";
+      gojodev.style.display = "none";
     }
   }
 
@@ -562,7 +561,7 @@ function gojodevIcon() {
   });
 
   gojodev.addEventListener("mouseout", () => {
-    gojodev.style.opacity = "0.5";
+    gojodev.style.opacity = "0.8";
   })
   handleScroll();
 }
