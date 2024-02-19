@@ -350,7 +350,6 @@ input::-webkit-inner-spin-button {
   transform: scale(1.05);
 }
 
-/* todo: vertically center the error messages */
 #invalid_input {
   align-items: center;
   display: flex;

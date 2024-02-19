@@ -545,7 +545,7 @@ function gojodevIcon() {
     console.log(welcomeRect.bottom)
     if (welcomeRect.bottom < 0) {
       gojodev.style.display = "block";
-      gojodev.style.opacity = "0.8";
+      gojodev.style.opacity = "0.6";
     }
     else {
       gojodev.style = "transform: translate(0, +15px);";
@@ -561,7 +561,7 @@ function gojodevIcon() {
   });
 
   gojodev.addEventListener("mouseout", () => {
-    gojodev.style.opacity = "0.8";
+    gojodev.style.opacity = "0.6";
   })
   handleScroll();
 }
