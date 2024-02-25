@@ -542,7 +542,6 @@ function gojodevIcon() {
 
   function handleScroll() {
     let welcomeRect = targetBottom.getBoundingClientRect();
-    console.log(welcomeRect.bottom)
     if (welcomeRect.bottom < 0) {
       gojodev.style.display = "block";
       gojodev.style.opacity = "0.6";

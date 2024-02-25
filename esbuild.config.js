@@ -1,8 +1,8 @@
 require("esbuild").build({
   // the entry point file described above
-  entryPoints: ["./home.js"],
+  entryPoints: ["./public//home.js"],
   // the build folder location described above
-  outfile: "./bundle.js",
+  outfile: "./public/bundle.js",
   bundle: true,
   // Replace with the browser versions you need to target
   target: ["chrome60", "firefox60", "safari11", "edge20"],
