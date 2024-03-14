@@ -39,7 +39,20 @@ function gojodev() {
       gojodev.src = "images/logo.webp";
       index = 0;
     }
-  }, 3500)
+  }, 2500)
 }
 
-// gojodev()
+gojodev()
+
+function DarkTheme() {
+  let root = document.querySelector(':root');
+  if (window.matchMedia('prefers-color-scheme: dark')) {
+    root.style.setProperty('--bg-color', 'black');
+  }
+  
+  else {
+    root.style.setProperty('--bg-color', 'white');
+  }
+}
+
+DarkTheme();

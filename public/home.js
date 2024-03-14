@@ -1,12 +1,16 @@
 "use strict";
+function DarkTheme() {
+  let root = document.querySelector(':root');
+  if (window.matchMedia('prefers-color-scheme: dark')) {
+    root.style.setProperty('--bg-color', 'black');
+  }
+  
+  else {
+    root.style.setProperty('--bg-color', 'white');
+  }
+}
 
-
-const DarkReader = require('darkreader');
-DarkReader.setFetchMethod(window.fetch);
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
-// ? I might mess with darker themes later
-// DarkReader.auto();
+DarkTheme();
 
 // ! GLOBAL
 var add_25 = 25;
@@ -201,7 +205,7 @@ function motivate() {
 var seconds = 0;
 var dt = new Date();
 var month = dt.getMonth() + 1; // cause of 0 indexing of the 12 months becomes 0 - 11
-if ([3, 4, 5].includes(month)) {
+if ([4, 5].includes(month)) {
   setInterval(motivate, 1000);
   motivate();
 }
@@ -452,23 +456,24 @@ async function find_points_needed() {
 
   // check for invalid input
   var invalid_target_input = (target_num <= 0) || (target_num > 625);
-  var invalid_subs_input = (hl_num < 0) || (ol_num < 0) || (hl_num > 6) || (ol_num > 6) || ((hl_num + ol_num) > 6);
+  var invalid_subs_input = (hl_num < 0) || (ol_num < 0);
   var max_pts = (hl_num * 100) + (ol_num * 56) + add_25;
   var invalid_range = (max_pts >= target_num) == false;
 
   const range_error_msg = `It's impossible to achieve ${target_num} CAO points with ${hl_num} higher-level subjects and ${ol_num} ordinary-level subjects.`;
   const pts_error_msg = "Your inputted CAO points must be between 1 and 625.";
-  const subs_error_msh = "This calculator will not allow for more than 6 subjects in total as inputs.";
+  const subjects_error_msg = "You can't have a negative amout of subjects";
 
   var error_status = "";
 
   if (invalid_range) {
     error_status += range_error_msg + "\n";
-  } if (invalid_subs_input) {
-    error_status += subs_error_msh + "\n";
   }
   if (invalid_target_input) {
     error_status += pts_error_msg + "\n";
+  }
+  if (invalid_subs_input) {
+    error_status += subjects_error_msg + "\n";
   }
 
   let invalid_input = document.getElementById("invalid_input");
@@ -487,6 +492,16 @@ async function find_points_needed() {
     info_container.style.opacity = "1";
     soultion_output.style.display = "none";
     document.getElementById("adding_25_container").style.opacity = "0";
+
+    if (target_num != 0 && (hl_num != 0 || ol_num != 0)) {
+      document.getElementById("result_container").scrollIntoView();
+
+
+      // todo: only scroll up if the user doesn't scroll
+      setTimeout(() => {
+        document.getElementById("calculator-container").scrollIntoView();
+      }, 1500);
+    }
   }
 
   else {
@@ -588,3 +603,9 @@ function gojodev() {
 }
 
 gojodev()
+
+/**
+ * todo: add in feature to show what courses they can do with the points and grades output and let them filter by locationa and course name
+ * todo: allow users to enter for more than 6 subjects
+ * todo: when the user causes an error scroll up to the cause of the errors and show them what they can get
+ */

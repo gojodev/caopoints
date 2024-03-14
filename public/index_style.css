@@ -6,11 +6,17 @@
 }
 
 :root {
-  --main-text-color: black;
+  --text-color: black;
   --primary: #0080ff;
   --bg-color: black;
   --secondary: #001952;
   --accent: orange;
+  --white: white;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 
@@ -18,7 +24,7 @@ body {
   align-items: center;
   min-width: 330px;
   width: 100%;
-  color: var(--main-text-color);
+  color: var(--text-color);
   background-color: var(--bg-color);
   overflow-x: hidden;
 }
@@ -26,7 +32,7 @@ body {
 .header {
   margin: 10px;
   padding: 10px;
-  color: var(--main-text-color);
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +44,7 @@ body {
   padding: 13px;
   margin: auto;
   border-radius: 15px;
-  background-color: white;
+  background-color: var(--white);
   align-items: center;
   text-align: center;
 }
@@ -55,7 +61,7 @@ body {
   padding: 8px;
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: var(--white);
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -84,7 +90,7 @@ body {
 
 a:link,
 a:visited {
-  color: white;
+  color: var(--white);
 }
 
 .selected {
@@ -93,7 +99,7 @@ a:visited {
 }
 
 .special-background {
-  background-color: black;
+  background-color: var(--text-color);
   padding: 10px;
   border-radius: 20px;
 }
@@ -123,7 +129,7 @@ a:visited {
   background-color: var(--primary);
   text-align: center;
   padding: 15px;
-  color: var(--main-text-color);
+  color: var(--text-color);
 }
 
 .welcome-content {
@@ -148,7 +154,7 @@ a:visited {
 .calculator-content {
   max-width: 800px;
   margin: auto;
-  color: var(--main-text-color);
+  color: var(--text-color);
 }
 
 .calculator h2 {
@@ -173,10 +179,10 @@ select {
   width: 90%;
   padding: 10px;
   font-weight: bold;
-  border-bottom: 1px solid var(--main-text-color);
+  border-bottom: 1px solid var(--text-color);
   border-top-left-radius: 20px;
   background-color: var(--primary);
-  color: var(--main-text-color);
+  color: var(--text-color);
   font-size: 16px;
   margin-top: 5px;
   transition: border, color 0.3s;
@@ -205,7 +211,7 @@ input::-webkit-inner-spin-button {
 
 ::placeholder {
   opacity: 0.8;
-  color: var(--main-text-color);
+  color: var(--text-color);
 }
 
 /* Mobile  */
@@ -251,13 +257,13 @@ input::-webkit-inner-spin-button {
 .info {
   background-color: var(--primary);
   padding: 15px;
-  color: var(--main-text-color);
+  color: var(--text-color);
 }
 
 .info-content {
   text-align: center;
   margin: auto;
-  color: white;
+  color: var(--white);
 }
 
 .info p {
@@ -267,18 +273,18 @@ input::-webkit-inner-spin-button {
 
 .footer {
   text-align: center;
-  background-color: black;
+  background-color: var(--text-color);
   font-size: 14px;
   padding: 10px;
 }
 
 #adding_25_text {
-  color: white;
+  color: var(--white);
 }
 
 .info_output {
   font-weight: bold;
-  color: white;
+  color: var(--white);
 }
 
 .grey {
@@ -290,11 +296,11 @@ input::-webkit-inner-spin-button {
 }
 
 .white {
-  color: white;
+  color: var(--white);
 }
 
 .black {
-  color: black;
+  color: var(--text-color);
 }
 
 .show {
@@ -353,7 +359,7 @@ input::-webkit-inner-spin-button {
 #invalid_input {
   align-items: center;
   display: flex;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 20px;
   padding: 10px;
 }
