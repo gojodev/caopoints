@@ -47,11 +47,11 @@ gojodev()
 function DarkTheme() {
   let root = document.querySelector(':root');
   if (window.matchMedia('prefers-color-scheme: dark')) {
-    root.style.setProperty('--bg-color', 'black');
+    root.style.setProperty('--white', 'black');
   }
   
   else {
-    root.style.setProperty('--bg-color', 'white');
+    root.style.setProperty('--white', 'white');
   }
 }
 

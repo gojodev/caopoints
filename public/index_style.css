@@ -6,14 +6,10 @@
 }
 
 :root {
-  --text-color: black;
-  --primary: #0080ff;
-  --bg-color: black;
-  --secondary: #001952;
-  --accent: orange;
+  --black: black;
   --white: white;
+  --accent: #0080ff;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -24,19 +20,19 @@ body {
   align-items: center;
   min-width: 330px;
   width: 100%;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--black);
+  background-color: var(--white);
   overflow-x: hidden;
 }
 
 .header {
   margin: 10px;
   padding: 10px;
-  color: var(--text-color);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--white);
 }
 
 .logo-container {
@@ -99,9 +95,11 @@ a:visited {
 }
 
 .special-background {
-  background-color: var(--text-color);
+  background-color: var(--white);
+  color: black;
   padding: 10px;
   border-radius: 20px;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 #img-float {
@@ -126,10 +124,10 @@ a:visited {
 }
 
 .welcome {
-  background-color: var(--primary);
+  background-color: var(--black);
   text-align: center;
   padding: 15px;
-  color: var(--text-color);
+  color: var(--white);
 }
 
 .welcome-content {
@@ -154,7 +152,7 @@ a:visited {
 .calculator-content {
   max-width: 800px;
   margin: auto;
-  color: var(--text-color);
+  color: var(--white);
 }
 
 .calculator h2 {
@@ -171,7 +169,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: var(--primary);
+  color: var(--black);
 }
 
 input[type="number"],
@@ -179,10 +177,10 @@ select {
   width: 90%;
   padding: 10px;
   font-weight: bold;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--white);
   border-top-left-radius: 20px;
-  background-color: var(--primary);
-  color: var(--text-color);
+  background-color: var(--black);
+  color: var(--white);
   font-size: 16px;
   margin-top: 5px;
   transition: border, color 0.3s;
@@ -211,7 +209,7 @@ input::-webkit-inner-spin-button {
 
 ::placeholder {
   opacity: 0.8;
-  color: var(--text-color);
+  color: var(--white);
 }
 
 /* Mobile  */
@@ -221,14 +219,19 @@ input::-webkit-inner-spin-button {
   select {
     text-align: center;
   }
+
+  #img-info {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
 }
 
 .results {
   text-align: center;
   padding: 10px;
-  color: var(--primary);
+  color: var(--black);
   font-weight: bold;
-  background-color: var(--primary);
+  background-color: var(--black);
   border-radius: 20px;
   width: 85%;
   margin: auto;
@@ -255,9 +258,9 @@ input::-webkit-inner-spin-button {
 }
 
 .info {
-  background-color: var(--primary);
+  background-color: var(--black);
   padding: 15px;
-  color: var(--text-color);
+  color: var(--white);
 }
 
 .info-content {
@@ -273,9 +276,21 @@ input::-webkit-inner-spin-button {
 
 .footer {
   text-align: center;
-  background-color: var(--text-color);
+  background-color: var(--accent);
+  color: var(--black);
   font-size: 14px;
   padding: 10px;
+  width: 30%;
+  border-radius: 20px;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.footer:hover {
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--black);
+  transition: 0.2s;
 }
 
 #adding_25_text {
@@ -300,7 +315,11 @@ input::-webkit-inner-spin-button {
 }
 
 .black {
-  color: var(--text-color);
+  color: var(--white);
+}
+
+.accent {
+  color: var(--accent);
 }
 
 .show {
@@ -368,6 +387,12 @@ input::-webkit-inner-spin-button {
 @media only screen and (min-width: 768px) {
   .motivation {
     width: 50%;
+    border-radius: 20px;
+  }
+
+  #img-info {
+    border: 5px solid black;
+    padding: 5px;
     border-radius: 20px;
   }
 }
