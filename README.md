@@ -27,10 +27,8 @@
 ```
 caopoints
 ├─ .firebaserc
-├─ .vscode
 ├─ esbuild.config.js
 ├─ main.py
-├─ privacy policy.html
 ├─ public
 │  ├─ 404.html
 │  ├─ about.html
@@ -42,17 +40,11 @@ caopoints
 │  ├─ images
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
-│  │  ├─ GitHub.webp
 │  │  ├─ gojodev.webp
 │  │  ├─ joke.webp
-│  │  ├─ kofi.webp
-│  │  ├─ LinkedIn.webp
 │  │  ├─ logo.webp
-│  │  ├─ points-system.webp
-│  │  └─ twitter.webp
+│  │  └─ points-system.webp
 │  ├─ index.html
 │  └─ index_style.css
-├─ README.md
-└─ testing.js
-
+└─ README.md
 ```

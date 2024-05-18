@@ -1,17 +1,4 @@
 "use strict";
-function DarkTheme() {
-  let root = document.querySelector(':root');
-  if (window.matchMedia('prefers-color-scheme: dark')) {
-    root.style.setProperty('--white', 'black');
-  }
-  
-  else {
-    root.style.setProperty('--white', 'white');
-  }
-}
-
-// DarkTheme();
-
 // ! GLOBAL
 var add_25 = 25;
 /**
@@ -603,9 +590,3 @@ function gojodev() {
 }
 
 gojodev()
-
-/**
- * todo: add in feature to show what courses they can do with the points and grades output and let them filter by locationa and course name
- * todo: allow users to enter for more than 6 subjects
- * todo: when the user causes an error scroll up to the cause of the errors and show them what they can get
- */

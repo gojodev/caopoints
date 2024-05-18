@@ -5,21 +5,17 @@
     font-weight: bold;
 }
 
-/* Custom variables for color scheme */
 :root {
-    --main-text-color: white;
-    --black: #0080ff;
-    --white: black;
-    --secondary: #001952;
-    --accent: orange;
+    --black: black;
+    --white: white;
+    --accent: #0080ff;
 }
 
-/* Set default font styles */
 body {
     max-width: 100%;
     width: 100%;
     margin: auto;
-    color: var(--main-text-color);
+    color: var(--black);
     background-color: var(--white);
     overflow-x: hidden;
 }
@@ -30,7 +26,7 @@ body {
     padding: 13px;
     margin: auto;
     border-radius: 15px;
-    background-color: white;
+    background-color: var(--white);
     align-items: center;
     text-align: center;
 }
@@ -47,7 +43,6 @@ body {
     padding: 8px;
     text-decoration: none;
     text-align: center;
-    color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -64,7 +59,7 @@ body {
     transition: 0.2s;
 }
 
-@keyframes navOptions {
+@keyframes pulseAni {
     from {
         opacity: 0.5;
     }
@@ -76,23 +71,19 @@ body {
 
 a:link,
 a:visited {
-    color: white;
+    color: var(--white);
 }
 
 .selected {
     color: var(--accent);
-    transition: 0.2s;
 }
 
 .special-background {
-    opacity: 1;
-    background-color: black;
+    background-color: var(--white);
+    color: var(--black);
     padding: 10px;
     border-radius: 20px;
-}
-
-.special-background:hover {
-    opacity: 1;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 #img-float {
@@ -112,7 +103,7 @@ a:visited {
 .header {
     margin: 10px;
     padding: 10px;
-    color: var(--main-text-color);
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,9 +123,9 @@ a:visited {
 }
 
 .general_background {
-    background-color: var(--secondary);
+    background-color: var(--black);
     padding: 15px;
-    color: var(--main-text-color);
+    color: var(--white);
     border-radius: 20px;
     margin: 10px;
     text-align: center;
@@ -143,20 +134,21 @@ a:visited {
 
 .info_output {
     font-weight: bold;
-    color: var(--black);
+    color: var(--accent);
 }
 
 #emmanuel-container {
     text-align: center;
     margin-top: 20px;
+    color: var(--black);
 }
 
 #emmanuel {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 5px solid white;
-    transition: transform, 0.2s;
+    border: 5px solid var(--white);
+    transition: 0.2s;
 
     object-fit: cover;
     object-position: center;
@@ -177,6 +169,7 @@ a:visited {
 }
 
 .footer-icons-support {
+    color: var(--black);
     margin: 10px;
     transition: 0.2s;
 }
@@ -186,6 +179,25 @@ a:visited {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.2);
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--black);
+    font-size: 14px;
+    padding: 10px;
+    width: 30%;
+    border-radius: 20px;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.footer:hover {
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--black);
+    transition: 0.2s;
 }
 
 #self_desc {
