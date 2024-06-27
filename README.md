@@ -21,7 +21,7 @@
   <br>
   
   <p> https://caopoints.com/ </p>
-  <p><img src="https://github.com/Agent421/caopoints/assets/40457467/1a164e9c-3f61-4007-8a9d-3a4f436fc072" alt="demo"></p>
+  <p><img src="https://github.com/gojodev/caopoints/assets/40457467/c0845fee-5635-48dc-b54f-abe7c7b0c21f" alt="demo"></p>
 </div>
 
 ```
