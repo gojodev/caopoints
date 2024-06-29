@@ -200,10 +200,6 @@ a:visited {
     transition: 0.2s;
 }
 
-#self_desc {
-    font-family: 'Courier New', Courier, monospace;
-}
-
 .right {
     float: right;
 }
