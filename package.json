@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "build": "node ./esbuild.config.js"
+  },
+  "dependencies": {
+    "@bubblewrap/cli": "^0.5.1",
+    "darkreader": "^4.9.73",
+    "firebase": "^10.6.0",
+    "firebase-admin": "^12.2.0",
+    "firebase-tools": "^13.3.1",
+    "node-fetch": "^3.3.2",
+    "purgecss": "^5.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "sharp": "^0.33.2",
+    "web-vitals": "^3.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "esbuild": "^0.19.5",
+    "rollup": "^3.29.1",
+    "rollup-watch": "^3.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "name": "caopoints",
+  "version": "1.0.0",
+  "description": "<div style=\"text-align:center;margin:auto;\">\r   <p>The tool quickly outputs the lowest grade you can get in a number of subjects that will give you enough points for a certain course.</p>\r     <p>\r         When I was an Irish Leaving cert student it was frustrating and time-consuming to calculate an ideal\r         grade requirement to reach a CAO points target.\r     </p>\r     <p>So I created this tool.</p>\r     <p>The tool quickly outputs the lowest grade you can get in a number of subjects that will give you enough\r         points for a certain course.</p>\r     <p>The tool saves time as it may be time-consuming to calculate a grade combination that you are\r         comfortable with.</p>\r     <p>For example, imagine trying to find easy ways to score 400 CAO points with 4 higher levels and 2\r         ordinary level subjects. The amount of trial and error needed would frustrate anyone.</p>\r     <p>The tool also completely <strong>FREE</strong> to use and doesn't retain any of\r         the user's inputted information.</p>\r     <strong>TLDR; The tool saves students' time, stress, and money.</strong>",
+  "main": "esbuild.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

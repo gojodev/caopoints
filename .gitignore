@@ -1,7 +1,5 @@
 # ignore stuff 💀
 .idea/
-*.txt
-*.json
 *.bat
 
 # Logs
