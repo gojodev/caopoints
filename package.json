@@ -6,7 +6,7 @@
     "@bubblewrap/cli": "^0.5.1",
     "darkreader": "^4.9.73",
     "firebase": "^10.6.0",
-    "firebase-admin": "^12.2.0",
+    "firebase-admin": "^12.3.1",
     "firebase-tools": "^13.3.1",
     "node-fetch": "^3.3.2",
     "purgecss": "^5.0.0",
