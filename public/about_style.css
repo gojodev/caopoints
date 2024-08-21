@@ -139,7 +139,6 @@ a:visited {
 
 #emmanuel-container {
     text-align: center;
-    margin-top: 20px;
     color: var(--black);
 }
 
@@ -156,10 +155,6 @@ a:visited {
 
 #emmanuel:hover {
     transform: scale(1.05);
-}
-
-#founder-name {
-    margin-top: 10px;
 }
 
 #founder-text {
@@ -208,6 +203,20 @@ a:visited {
     animation: fadeInAni;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+}
+
+#getOnGoogle {
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+#getOnGoogle:hover {
+    transform: scale(1.02);
+}
+
+.box-shadow {
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 @keyframes fadeInAni {

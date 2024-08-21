@@ -28,7 +28,10 @@
 caopoints
 ├─ .firebaserc
 ├─ esbuild.config.js
+├─ firebase.json
 ├─ main.py
+├─ package-lock.json
+├─ package.json
 ├─ public
 │  ├─ 404.html
 │  ├─ about.html
@@ -40,6 +43,7 @@ caopoints
 │  ├─ images
 │  │  ├─ emmanuel.webp
 │  │  ├─ favicon.ico
+│  │  ├─ GetItOnGooglePlay_Badge_Web_color_English.png
 │  │  ├─ gojodev.webp
 │  │  ├─ joke.webp
 │  │  ├─ logo.webp
@@ -47,4 +51,5 @@ caopoints
 │  ├─ index.html
 │  └─ index_style.css
 └─ README.md
+
 ```

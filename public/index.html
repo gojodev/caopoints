@@ -92,12 +92,12 @@
     </div>
   </section>
 
+  <!-- todo allow users to swipe the button away -->
   <a href="https://gojodev.com" alt="gojodev.com" target="_blank">
     <img src="images/gojodev.webp" alt="gojodev" id="fixed-gojodev" class="fadeIn pulseAnimation">
   </a>
 
-  <section class="calculator" id="calculator-container">
-    <h2 class="white">CAO Points Calculator</h2>
+  <div class="calculator" id="calculator-container">
     <div class="calculator-content">
       <div class="input-group">
         <label for="target_text">CAO Points Target:</label>
@@ -126,7 +126,7 @@
           <option value=1>Yes</option>
         </select>
       </div>
-  </section>
+  </div>
 
   <section class="results" id="result_container">
     <div id="info_container">
@@ -174,9 +174,19 @@
 
   <br>
 
+  <span id="getOnGoogle">
+    <a href="" alt="Link to app on gogole play">
+      <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" class="box-shadow">
+    </a>
+  </span>
+
+  <br>
+
   <footer class="footer">
     <h3>&copy; GojoDev <strong id="year"></strong> </h3>
   </footer>
+
+  <br>
 
   <script async type="module" src="./bundle.js"></script>
 </body>

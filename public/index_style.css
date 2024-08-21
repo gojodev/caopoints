@@ -265,6 +265,10 @@ span {
   background-color: var(--black);
   padding: 15px;
   color: var(--white);
+  border-radius: 20px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
 }
 
 .info-content {
@@ -385,6 +389,20 @@ span {
   background-color: var(--white);
   border-radius: 20px;
   padding: 10px;
+}
+
+#getOnGoogle {
+  display: flex;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+#getOnGoogle:hover {
+  transform: scale(1.02);
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 /* Desktop */

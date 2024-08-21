@@ -175,6 +175,9 @@ function adjustor(letter_grades) {
 /**
  * yearly joke that will be activated in may and june
  */
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 function motivate() {
   seconds += 1;
   if (59 <= seconds && seconds <= 60) {
@@ -483,8 +486,6 @@ async function find_points_needed() {
     if (target_num != 0 && (hl_num != 0 || ol_num != 0)) {
       document.getElementById("result_container").scrollIntoView();
 
-
-      // todo: only scroll up if the user doesn't scroll
       setTimeout(() => {
         document.getElementById("calculator-container").scrollIntoView();
       }, 1500);

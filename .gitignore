@@ -1,6 +1,7 @@
 # ignore stuff 💀
 .idea/
 *.bat
+Applilix/
 
 # Logs
 logs
