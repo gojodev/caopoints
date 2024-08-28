@@ -531,63 +531,28 @@ async function find_points_needed() {
   }
 }
 
-function gojodevIcon() {
-  let gojodev = document.getElementById("fixed-gojodev");
-  let targetBottom;
-  if (window.innerWidth < 500) {
-    targetBottom = document.getElementById("bool_hl_maths");
-  }
-  else {
-    targetBottom = document.querySelector(".welcome");
-  }
+var gojodev = document.getElementById('gojodev');
+gojodev.addEventListener('mouseover', () => {
 
-  gojodev.style.display = "block";
+  gojodev.classList.remove("fadeIn");
+  gojodev.offsetWidth;
+  gojodev.classList.add("fadeIn");
 
-  function handleScroll() {
-    let welcomeRect = targetBottom.getBoundingClientRect();
-    if (welcomeRect.bottom < 0) {
-      gojodev.style.display = "block";
-      gojodev.style.opacity = "0.6";
-    }
-    else {
-      gojodev.style = "transform: translate(0, +15px);";
-      gojodev.style.animationDelay = "0.5s";
-      gojodev.style.opacity = "0";
-      gojodev.style.display = "none";
-    }
-  }
+  gojodev.src = "images/gojodev.webp";
+});
 
-  window.addEventListener("scroll", handleScroll);
-  gojodev.addEventListener("mouseover", () => {
-    gojodev.style.opacity = "1";
-  });
+gojodev.addEventListener('mouseout', () => {
 
-  gojodev.addEventListener("mouseout", () => {
-    gojodev.style.opacity = "0.6";
-  })
-  handleScroll();
-}
+  gojodev.classList.remove("fadeIn");
+  gojodev.offsetWidth;
+  gojodev.classList.add("fadeIn");
 
-gojodevIcon();
+  gojodev.src = "images/logo.webp";
+});
 
-function gojodev() {
-  let emmanuel = document.getElementById("gojodev");
-  let index = 0;
-  setInterval(() => {
-
-    emmanuel.classList.remove("fadeIn");
-    emmanuel.offsetWidth;
-    emmanuel.classList.add("fadeIn");
-
-    if (index == 0) {
-      emmanuel.src = "images/gojodev.webp";
-      index = 1;
-    }
-    else {
-      emmanuel.src = "images/logo.webp";
-      index = 0;
-    }
-  }, 3500)
-}
-
-gojodev()
+const DarkReader = require('darkreader');
+DarkReader.auto({
+  brightness: 100,
+  contrast: 100,
+  darkSchemeTextColor: 'white',
+});

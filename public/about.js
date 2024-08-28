@@ -15,31 +15,28 @@ function about_me() {
 
 about_me();
 
-function gojodev() {
-  let gojodev = document.getElementById("gojodev");
-  let emmanuel = document.getElementById("emmanuel");
-  let index = 0;
-  setInterval(() => {
+var gojodev = document.getElementById('gojodev');
+gojodev.addEventListener('mouseover', () => {
 
-    gojodev.classList.remove("fadeIn");
-    gojodev.offsetWidth;
-    gojodev.classList.add("fadeIn");
+  gojodev.classList.remove("fadeIn");
+  gojodev.offsetWidth;
+  gojodev.classList.add("fadeIn");
 
-    if (index == 0) {
-      emmanuel.style = "border-radius: 50%";
-      emmanuel.src = "images/gojodev.webp";
+  gojodev.src = "images/gojodev.webp";
+});
 
-      gojodev.src = "images/gojodev.webp";
-      index = 1;
-    }
-    else {
-      emmanuel.style = "border-radius: 20px";
-      emmanuel.src = "images/emmanuel.webp";
+gojodev.addEventListener('mouseout', () => {
 
-      gojodev.src = "images/logo.webp";
-      index = 0;
-    }
-  }, 2500)
-}
+  gojodev.classList.remove("fadeIn");
+  gojodev.offsetWidth;
+  gojodev.classList.add("fadeIn");
 
-gojodev()
+  gojodev.src = "images/logo.webp";
+});
+
+const DarkReader = require('darkreader');
+DarkReader.auto({
+  brightness: 100,
+  contrast: 100,
+  darkSchemeTextColor: 'white',
+});

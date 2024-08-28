@@ -69,7 +69,7 @@ body {
   opacity: 1;
   animation-name: pulseAni;
   animation-duration: 1.5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3;
   transition: 0.2s;
 }
 
@@ -365,15 +365,24 @@ span {
   }
 }
 
+#gojodev {
+  transition: 0.2s;
+}
+
+#gojodev:hover {
+  transform: scale(1.05);
+}
+
+
 #fixed-gojodev {
   width: 85px;
   margin: 5px;
-  opacity: 0;
-  display: none;
+  opacity: 1;
+  display: block;
   transition: 0.2s;
-  position: sticky;
   top: 0;
   z-index: 1;
+  margin: auto;
 
   object-fit: cover;
   object-position: center;
@@ -381,6 +390,26 @@ span {
 
 #fixed-gojodev:hover {
   transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--black);
+
+  color: var(--black);
+  font-size: 14px;
+  padding: 10px;
+  width: 30%;
+  border-radius: 20px;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.footer:hover {
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--accent);
+  transition: 0.2s;
 }
 
 #invalid_input {
