@@ -3,7 +3,7 @@
     "build": "node ./esbuild.config.js"
   },
   "dependencies": {
-    "@bubblewrap/cli": "^0.5.1",
+    "@bubblewrap/cli": "^1.22.0",
     "darkreader": "^4.9.89",
     "firebase": "^10.13.0",
     "firebase-admin": "^12.2.0",
