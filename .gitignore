@@ -2,6 +2,7 @@
 .idea/
 *.bat
 Applilix/
+.well-known/
 
 # Logs
 logs
