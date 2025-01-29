@@ -1,5 +1,5 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.1rem;
   text-decoration: none;
   font-weight: bold;
@@ -14,7 +14,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   align-items: center;
@@ -188,7 +187,6 @@ select {
 input[type="number"]:hover,
 select:hover {
   border-bottom-left-radius: 20px;
-
 }
 
 input[type="number"]:focus,
@@ -204,7 +202,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
 ::placeholder {
   opacity: 0.8;
   color: var(--white);
@@ -212,7 +209,6 @@ input::-webkit-inner-spin-button {
 
 /* Mobile  */
 @media screen and (max-width: 500px) {
-
   input[type="number"],
   select {
     text-align: center;
@@ -373,7 +369,6 @@ span {
   transform: scale(1.05);
 }
 
-
 #fixed-gojodev {
   width: 85px;
   margin: 5px;
@@ -446,4 +441,20 @@ span {
     padding: 5px;
     border-radius: 20px;
   }
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.toggleContainer {
+  color: black;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.toggleContainer:hover {
+  transform: scale(1.05)
 }

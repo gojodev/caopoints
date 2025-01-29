@@ -1,267 +1,282 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 :root {
-    --black: black;
-    --white: white;
-    --accent: #0080ff;
+  --black: black;
+  --white: white;
+  --accent: #0080ff;
 }
 
 body {
-    max-width: 100%;
-    width: 100%;
-    margin: auto;
-    color: var(--black);
-    background-color: var(--white);
-    overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
 }
 
-
 .logo-container {
-    display: flex;
-    padding: 13px;
-    margin: auto;
-    border-radius: 15px;
-    background-color: var(--white);
-    align-items: center;
-    text-align: center;
+  display: flex;
+  padding: 13px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: var(--white);
+  align-items: center;
+  text-align: center;
 }
 
 .logo {
-    margin: 13px;
-    text-align: center;
-    width: 120px;
-    height: 120px;
+  margin: 13px;
+  text-align: center;
+  width: 120px;
+  height: 120px;
 }
 
 .nav-link {
-    margin: auto;
-    padding: 8px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    transition: color 0.3s;
+  margin: auto;
+  padding: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .pulseAnimation {
-    opacity: 1;
-    animation-name: pulseAni;
-    animation-duration: 1.5s;
-    animation-iteration-count: 3;
-    transition: 0.2s;
+  opacity: 1;
+  animation-name: pulseAni;
+  animation-duration: 1.5s;
+  animation-iteration-count: 3;
+  transition: 0.2s;
 }
 
 @keyframes pulseAni {
-    from {
-        opacity: 0.5;
-    }
+  from {
+    opacity: 0.5;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 a:link,
 a:visited {
-    color: var(--white);
+  color: var(--white);
 }
 
 .selected {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .special-background {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 #img-float {
-    float: left;
+  float: left;
 }
 
 .nav-options {
-    margin: auto;
-    align-items: center;
-    vertical-align: middle;
+  margin: auto;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .title {
-    width: 70vw;
+  width: 70vw;
 }
 
 .header {
-    margin: 10px;
-    padding: 10px;
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white);
+  margin: 10px;
+  padding: 10px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
 }
 
 #img-info {
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 .general_background {
-    background-color: var(--black);
-    padding: 7px;
-    color: var(--white);
-    border-radius: 20px;
-    margin: auto auto 10px auto;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+  background-color: var(--black);
+  padding: 7px;
+  color: var(--white);
+  border-radius: 20px;
+  margin: auto auto 10px auto;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .info_output {
-    font-weight: bold;
-    color: var(--accent);
+  font-weight: bold;
+  color: var(--accent);
 }
 
 #emmanuel-container {
-    text-align: center;
-    color: var(--black);
+  text-align: center;
+  color: var(--black);
 }
 
 #emmanuel {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    transition: 0.2s;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  transition: 0.2s;
 
-    object-fit: cover;
-    object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 #emmanuel:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #founder-text {
-    color: var(--accent);
-    margin-top: 5px;
-    font-weight: bold;
+  color: var(--accent);
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .footer-icons-support {
-    color: var(--black);
-    margin: 10px;
-    transition: 0.2s;
+  color: var(--black);
+  margin: 10px;
+  transition: 0.2s;
 }
 
 .footer-icons-support:hover {
-    background-image: linear-gradient(45deg, yellow, #af4261);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: scale(1.2);
+  background-image: linear-gradient(45deg, yellow, #af4261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
 .footer {
-    text-align: center;
-    background-color: var(--black);
+  text-align: center;
+  background-color: var(--black);
 
-    color: var(--black);
-    font-size: 14px;
-    padding: 10px;
-    width: 30%;
-    border-radius: 20px;
-    margin: auto;
-    transition: 0.2s;
+  color: var(--black);
+  font-size: 14px;
+  padding: 10px;
+  width: 30%;
+  border-radius: 20px;
+  margin: auto;
+  transition: 0.2s;
 }
 
 .footer:hover {
-    font-size: 16px;
-    color: var(--white);
-    background-color: var(--accent);
-    transition: 0.2s;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--accent);
+  transition: 0.2s;
 }
 
 .right {
-    float: right;
+  float: right;
 }
 
 .fadeIn {
-    animation: fadeInAni;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+  animation: fadeInAni;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 
 #getOnGoogle {
-    display: flex;
-    justify-content: center;
-    transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s;
 }
 
 #getOnGoogle:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .box-shadow {
-    box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 @keyframes fadeInAni {
-    from {
-        opacity: 0;
-        transform: translate(0, -15px);
-    }
+  from {
+    opacity: 0;
+    transform: translate(0, -15px);
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 #gojodev {
-    transition: 0.2s;
+  transition: 0.2s;
 }
 
 #gojodev:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #fixed-gojodev {
-    width: 85px;
-    margin: 5px;
-    opacity: 1;
-    display: block;
-    transition: 0.2s;
-    top: 0;
-    z-index: 1;
-    margin: auto;
+  width: 85px;
+  margin: 5px;
+  opacity: 1;
+  display: block;
+  transition: 0.2s;
+  top: 0;
+  z-index: 1;
+  margin: auto;
 
-    object-fit: cover;
-    object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 #fixed-gojodev:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
-    .logo-container {
-        width: auto;
-        align-items: center;
-        text-align: center;
-    }
+  .logo-container {
+    width: auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.toggleContainer {
+  color: black;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.toggleContainer:hover {
+  transform: scale(1.05);
 }
