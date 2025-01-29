@@ -280,3 +280,7 @@ a:visited {
 .toggleContainer:hover {
   transform: scale(1.05);
 }
+
+.white {
+    color: white;
+}
