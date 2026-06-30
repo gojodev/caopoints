@@ -61,7 +61,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="header title fadeIn">
+  <div class="header fadeIn">
     <div class="logo-container">
       <div id="img-float">
         <a href="https://gojodev.com" alt="gojodev home page" target="_blank">
@@ -70,36 +70,19 @@
       </div>
 
       <div class="center">
-        <div class="nav-options right">
-          <a href="index.html">
-            <div class="nav-link special-background pulseAnimation">
-              <h3 class="selected">Home</h3>
-            </div>
-          </a>
-  
-          <br>
-  
-          <a href="about.html">
-            <div class="nav-link special-background pulseAnimation">
-              <h3>About</h3>
-            </div>
-          </a>
+        <div class="nav-options">
+          <a href="index.html" class="nav-link active-nav">Home</a>
+          <a href="about.html" class="nav-link">About</a>
         </div>
-  
-        <i class="fa-solid fa-sun fa-3x toggleContainer" id="darkToggle"></i>
-        
+        <i class="fa-solid fa-sun toggleContainer" id="darkToggle"></i>
       </div>
     </div>
   </div>
 
   <section class="welcome">
     <div class="welcome-content">
-      <h2 class="selected special-background">Simplify Your Path to
-        Achieving Your Desired CAO Points</h2>
-      <strong>
-        <h3 class="white">Shows the easiest grades that are needed to get into College / University.
-        </h3>
-      </strong>
+      <h2>Simplify Your Path to Achieving Your Desired CAO Points</h2>
+      <h3>Shows the easiest grades needed to reach your CAO points target and get into college.</h3>
     </div>
   </section>
 
@@ -134,30 +117,29 @@
       </div>
     </div>
 
-    <section class="results box-shadow" id="result_container">
+    <section class="results" id="result_container">
       <div id="info_container">
         <div id="adding_25_container">
-          <span class="" id="adding_25_text">
-            Adding +25
-          </span>
+          <span id="adding_25_text">+25 pts &mdash; HL Maths Bonus</span>
         </div>
       </div>
 
       <div id="soultion_output">
-        <h2> <span class="accent"> Recommended Points: </span> <span class="red"> : </span> <span class="info_output"
-            id="points_req">
-          </span> </h2>
-        <h2> <span class="accent"> Required Results</span> <span class="red"> : </span>
-          <span class="info_output" id="req_results">
-          </span>
-        </h2>
-        <h2> <span class="accent"> Grade Average Required</span><span class="red"> :
-          </span><span class="info_output" id="grade_avg_req"> </span> </h2>
+        <div class="result-row">
+          <span class="result-label">Recommended Points</span>
+          <span class="result-value info_output" id="points_req"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">Required Results</span>
+          <span class="result-value info_output" id="req_results"></span>
+        </div>
+        <div class="result-row">
+          <span class="result-label">Grade Average Required</span>
+          <span class="result-value info_output" id="grade_avg_req"></span>
+        </div>
       </div>
 
-      <div id="invalid_input">
-      </div>
-      <br>
+      <div id="invalid_input"></div>
     </section>
 
     <br>
@@ -198,7 +180,76 @@
       <h3 class="white">&copy; GojoDev <strong id="year"></strong> </h3>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox-inner" id="lightboxInner">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+    </div>
+
     <script async type="module" src="./bundle.js"></script>
+
+    <script>
+      // Theme toggle — runs after bundle.js (window load) to strip DarkReader listener via clone
+      window.addEventListener('load', function () {
+        var toggle = document.getElementById('darkToggle');
+        if (!toggle) return;
+        var clone = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(clone, toggle);
+
+        clone.addEventListener('click', function () {
+          var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+          if (isLight) {
+            document.documentElement.removeAttribute('data-theme');
+            clone.classList.remove('fa-moon');
+            clone.classList.add('fa-sun');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            clone.classList.remove('fa-sun');
+            clone.classList.add('fa-moon');
+          }
+        });
+      });
+
+      // Lightbox
+      (function () {
+        var overlay = document.getElementById('lightbox');
+        var inner   = document.getElementById('lightboxInner');
+        var img     = document.getElementById('lightboxImg');
+        var closeBtn = document.getElementById('lightboxClose');
+        var trigger = document.getElementById('img-info');
+
+        function openLightbox(src, alt) {
+          img.src = src;
+          img.alt = alt || '';
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        if (trigger) {
+          trigger.addEventListener('click', function () {
+            openLightbox(this.src, this.alt);
+          });
+        }
+
+        // Close on backdrop click (not on the image itself)
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) closeLightbox();
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closeLightbox();
+        });
+      })();
+    </script>
 </body>
 
 </html>
