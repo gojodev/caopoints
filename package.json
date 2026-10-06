@@ -20,7 +20,7 @@
     "esbuild": "^0.19.5",
     "rollup": "^3.29.1",
     "rollup-watch": "^3.2.2",
-    "webpack": "^5.88.2",
+    "webpack": "^5.111.1",
     "webpack-cli": "^5.1.4"
   },
   "name": "caopoints",
