@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "@bubblewrap/cli": "^0.5.1",
-    "darkreader": "^4.9.89",
+    "darkreader": "^4.9.133",
     "firebase": "^10.13.0",
     "firebase-admin": "^12.2.0",
     "firebase-tools": "^13.16.0",
