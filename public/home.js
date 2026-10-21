@@ -170,8 +170,6 @@ function adjustor(letter_grades) {
  * yearly joke that will be activated in may and june
  */
 
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
 function motivate() {
   seconds += 1;
   if (59 <= seconds && seconds <= 60) {

@@ -446,29 +446,6 @@ input::-webkit-inner-spin-button {
   color: inherit;
 }
 
-#fixed-gojodev {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.65;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-#fixed-gojodev:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.footer h3 {
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.38);
-}
-
 /* ========================
    LOGO NAV IMAGE
 ======================== */

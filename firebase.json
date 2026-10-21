@@ -8,6 +8,8 @@
     ]
   },
   "emulators": {
+    "hub": { "port": 4410 },
+    "logging": { "port": 4510 },
     "firestore": {
       "port": 8003
     },

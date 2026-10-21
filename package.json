@@ -1,13 +1,14 @@
 {
   "scripts": {
-    "build": "node ./esbuild.config.js"
+    "dev": "npm run build && firebase emulators:start --only hosting",
+    "build": "tailwindcss -i ./tailwind.css -o ./public/tailwind.css --minify && node ./esbuild.config.js"
   },
   "dependencies": {
     "@bubblewrap/cli": "^0.5.1",
     "darkreader": "^4.9.89",
     "firebase": "^10.13.0",
     "firebase-admin": "^12.2.0",
-    "firebase-tools": "^13.16.0",
+    "firebase-tools": "^15.32.1",
     "node-fetch": "^3.3.2",
     "purgecss": "^5.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -17,9 +18,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.1",
+    "@tailwindcss/cli": "^4.1.7",
     "esbuild": "^0.19.5",
     "rollup": "^3.29.1",
     "rollup-watch": "^3.2.2",
+    "tailwindcss": "^4.1.7",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },

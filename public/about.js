@@ -1,5 +1,3 @@
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
 function about_me() {
   var bday = new Date("06/08/2004");
   var today = new Date();

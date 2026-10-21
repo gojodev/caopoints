@@ -1,0 +1,5 @@
+/* Tailwind theme + utilities only (no preflight), prefixed tw: so the site's own styles are left alone.
+   "important" lets utilities win over rules like a:link { color: inherit }. */
+@import "tailwindcss/theme.css" prefix(tw);
+@import "tailwindcss/utilities.css" source(none) important;
+@source "./public/*.html";
